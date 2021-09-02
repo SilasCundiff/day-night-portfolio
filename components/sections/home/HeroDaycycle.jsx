@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useDayModeContext } from '@/contexts/DayModeContext';
 import Lottie from 'react-lottie-player';
 import styled from 'styled-components';
 
@@ -24,7 +25,10 @@ const moonRiseSegments = [0, 30];
 const dayModeSegments = [30, 90];
 const nightModeSegments = [90, 120];
 
-function HeroDaycycle({ dayMode }) {
+function HeroDaycycle() {
+
+  const { dayMode } = useDayModeContext();
+
   const [animationData, setAnimationData] = useState();
   const [currentSegments, setCurrentSegments] = useState(moonRiseSegments);
   const [initialPageLoad, setInitialPageLoad] = useState(false);

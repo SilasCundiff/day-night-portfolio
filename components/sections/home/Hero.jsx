@@ -9,12 +9,12 @@ const StyledHero = styled.div`
   overflow-x: hidden;
 `;
 
-const Hero = ({ dayMode }) => {
+const Hero = () => {
   return (
     <StyledHero>
       <HeroCTA />
-      <HeroDaycycle dayMode={dayMode} />
-      <HeroStarfield dayMode={dayMode} />
+      <HeroDaycycle  />
+      <HeroStarfield  />
     </StyledHero>
   );
 };

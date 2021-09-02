@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Button from '@/components/reusables/Buttons/Button';
 const StyledHeroCTA = styled.div`
   width: 100%;
-  /* background: blue; */
   height: 50%;
   margin-top: 30%;
 

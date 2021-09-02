@@ -29,5 +29,7 @@
 
   ## TODO
   - [ ] Optimize Hero (disable animation and toggle debouncer when hero is not in view)
+  - [ ] Additional optimizations for mobile (disable some animations, etc)
   - [ ] Fix Sun/Moon Alignment
   - [ ] Improve Hero animation easing
+  - [x] Create a day/nightmode context/provider
