@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Hero from './Hero';
 const StyledHome = styled.div``;
 
-function Home() {
+function Home({ dayMode }) {
   return (
     <StyledHome>
-      <span>this is the Home component</span>
+      <Hero dayMode={dayMode} />
     </StyledHome>
   );
 }

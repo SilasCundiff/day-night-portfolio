@@ -17,7 +17,7 @@ export default function MainPage({ dayMode, dayModeToggler }) {
         {/* TODO update favicon */}
         {/* <link rel='icon' href='/favicon.ico' /> */}
       </Head>
-      <Home />
+      <Home dayModeToggler={dayModeToggler} dayMode={dayMode} />
       <About />
       <Projects />
       <Contact />

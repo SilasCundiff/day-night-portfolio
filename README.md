@@ -25,3 +25,9 @@
     accent: '#7BA6B7',
     text: '#BAEBFF',
     gradient: 'linear-gradient(to bottom right, #11A9E6,#BAEBFF)'
+
+
+  ## TODO
+  - [ ] Optimize Hero (disable animation and toggle debouncer when hero is not in view)
+  - [ ] Fix Sun/Moon Alignment
+  - [ ] Improve Hero animation easing

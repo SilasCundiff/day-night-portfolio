@@ -8,5 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins';
     background: ${({ theme: { primary } }) => primary};
     color: ${({ theme: { text } }) => text};
+    
   }
+
 `;

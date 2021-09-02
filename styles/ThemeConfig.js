@@ -8,7 +8,7 @@ export const dayTheme = {
   bold: 700,
   semiBold: 600,
   regular: 400,
-  light: 100,
+  light: 200,
 };
 
 export const nightTheme = {
@@ -20,5 +20,5 @@ export const nightTheme = {
   bold: 700,
   semiBold: 600,
   regular: 400,
-  light: 100,
+  light: 200,
 };
