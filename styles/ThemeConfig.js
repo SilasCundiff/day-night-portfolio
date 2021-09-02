@@ -5,6 +5,10 @@ export const dayTheme = {
   text: '#2F112D',
   gradient:
     'linear-gradient(to bottom right, #C7273F, #F26E50, #F26E50, #F0453B)',
+  bold: 700,
+  semiBold: 600,
+  regular: 400,
+  light: 100,
 };
 
 export const nightTheme = {
@@ -13,4 +17,8 @@ export const nightTheme = {
   accent: '#7BA6B7',
   text: '#BAEBFF',
   gradient: 'linear-gradient(to bottom right, #11A9E6,#BAEBFF)',
+  bold: 700,
+  semiBold: 600,
+  regular: 400,
+  light: 100,
 };
