@@ -6,15 +6,15 @@ const StyledHero = styled.div`
   width: 100vw;
   height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 `;
 
 const Hero = () => {
   return (
     <StyledHero>
       <HeroCTA />
-      <HeroDaycycle  />
-      <HeroStarfield  />
+      <HeroDaycycle />
+      <HeroStarfield />
     </StyledHero>
   );
 };

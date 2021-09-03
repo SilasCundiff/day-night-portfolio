@@ -26,7 +26,6 @@ const dayModeSegments = [30, 90];
 const nightModeSegments = [90, 120];
 
 function HeroDaycycle() {
-
   const { dayMode } = useDayModeContext();
 
   const [animationData, setAnimationData] = useState();

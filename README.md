@@ -1,7 +1,7 @@
 # Silas Cundiff Portfolio Project 3.0
 
 ## Main Features:
-  1. Fully responsive
+  1. Fully responsive - (built mobile first)
   2. Day/Night mode
   3. Built with Next.js, styled-components, lottie, and framer-motion
   
@@ -33,3 +33,7 @@
   - [ ] Fix Sun/Moon Alignment
   - [ ] Improve Hero animation easing
   - [x] Create a day/nightmode context/provider
+
+
+ ### Container specs
+  At 1920 - 1160 with 380 gutters on both sides (19.8% margin)

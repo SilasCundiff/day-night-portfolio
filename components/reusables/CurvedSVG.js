@@ -2,14 +2,20 @@ import { useDayModeContext } from '@/contexts/DayModeContext';
 import styled from 'styled-components';
 
 const StyledCurvedSVG = styled.svg`
-  width: 350vw;
-  height: 100vh;
   position: absolute;
   z-index: -1;
+  /* width: 350vw; */
+  /* height: 100vh; */
+  /* width: 700px; */
+  width: 187vw;
+  /* height: 400px; */
+  height: 60vh;
   background: transparent;
-  transform: translateX(-48%);
-  overflow: hidden;
-
+  overflow-x: hidden;
+  transform: translateX(-45%);
+  & * {
+    transition: fill 3s;
+  }
   ${({ bottom }) => (bottom ? 'bottom: 0' : 'top: 0')};
   .a {
     fill: ${({ dayMode }) => (dayMode ? '#c7273f' : '#203D49')};

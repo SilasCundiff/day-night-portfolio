@@ -6,17 +6,17 @@ const StyledHeroCTA = styled.div`
   height: 50%;
   margin-top: 30%;
 
+  & * {
+    transition: color 2s, background-color 2s;
+  }
   .CTA__Title {
-    font-size: 3rem;
     text-align: center;
-    color: ${({ theme: { primary } }) => primary};
-    font-weight: ${({ theme: { bold } }) => bold};
+
     margin-bottom: 1.25rem;
   }
   .CTA__Subtitle {
     font-size: 1.25rem;
     text-align: center;
-    color: ${({ theme: { primary } }) => primary};
     font-weight: ${({ theme: { light } }) => light};
     opacity: 80%;
     margin-bottom: 1.75rem;
@@ -25,8 +25,11 @@ const StyledHeroCTA = styled.div`
     display: flex;
     width: 100%;
 
-    & button {
-      margin: 0 auto;
+    .CTA__button--left {
+      margin: 0 1.2rem 0 auto;
+    }
+    .CTA__button--right {
+      margin: 0 auto 0 1.2rem;
     }
   }
 `;
@@ -37,8 +40,10 @@ function HeroCTA() {
       <h1 className='CTA__Title'>Silas Cundiff</h1>
       <h2 className='CTA__Subtitle'>Designer - Developer - Dreamer</h2>
       <div className='CTA__button-container'>
-        <Button>My Work</Button>
-        <Button ghost>Let&apos;s Chat</Button>
+        <Button className='CTA__button--left'>My Work</Button>
+        <Button className='CTA__button--right' ghost>
+          Let&apos;s Chat
+        </Button>
       </div>
     </StyledHeroCTA>
   );

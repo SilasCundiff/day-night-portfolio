@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { IconContext } from 'react-icons';
 import { BiSun, BiMoon } from 'react-icons/bi';
 
-
 const StyledThemeToggler = styled.div`
   position: fixed;
   top: 16px;
@@ -16,8 +15,8 @@ const StyledThemeToggler = styled.div`
 
 function ThemeToggler() {
   const { dayMode, dayModeToggler } = useDayModeContext();
-  console.log(dayMode)
-  
+  console.log(dayMode);
+
   return (
     <StyledThemeToggler>
       <span className='icon' onClick={dayModeToggler}>
