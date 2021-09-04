@@ -1,5 +1,9 @@
 # Silas Cundiff Portfolio Project 3.0
 
+Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Effects.
+
+
+
 ## Main Features:
   1. Fully responsive - (built mobile first)
   2. Day/Night mode
@@ -28,17 +32,30 @@
 
 
   ## TODO
-  - [ ] Optimize Hero (disable animation and toggle debouncer when hero is not in view)
-  - [ ] Additional optimizations for mobile (disable some animations, etc)
-  - [ ] Fix Sun/Moon Alignment
-  - [ ] Improve Hero animation easing
-  - [x] Create a day/nightmode context/provider
-  - [ ] About me background parallax
-  - [ ] About me Skills Icons and text highlights
-  - [ ] About me desktop styling
-  - [ ] Fix About me nightmode color of heading and first paragraph.
-  - [ ] Define better divider text.
-  - [ ] Add backend for contact form.
+  - [ ] General
+    - [ ] Add Nav
+    - [ ] Add Social Links floater
+    - [ ] Add links to all buttons
+    - [ ] Add media queries/styles for larger screens
+    - [ ] Additional optimizations for mobile (disable some animations, etc)
+    - [x] Create a day/nightmode context/provider
+    - [ ] Create custom toggle animation for day/night toggler
+  - [ ] Hero/Home
+    - [ ] Animation specific
+      - [ ] Add debouncer to prevent day/night toggle spam
+      - [ ] Optimize Hero (disable animation and toggle debouncer when hero is not in view)
+      - [ ] Fix Sun/Moon Alignment
+      - [ ] Improve Hero animation easing
+  - [ ] About Me
+    - [ ] About me background parallax
+    - [ ] About me Skills Icons and text highlights
+    - [ ] About me desktop styling
+    - [ ] Fix About me nightmode color of heading and first paragraph.
+  - [ ] Projects
+    - [ ] Define better projects divider text. 
+    - [ ] Add background
+  - [ ] Contact
+    - [ ] Add backend for contact form.
 
 
  ### Container specs
