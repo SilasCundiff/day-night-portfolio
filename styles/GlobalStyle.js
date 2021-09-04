@@ -8,6 +8,9 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins';
     background: ${({ theme: { primary } }) => primary};
     color: ${({ theme: { text } }) => text};
+    /* May not need */
+    overflow-x: hidden; 
+    
   }
   h1, h2, h3, h4 {
     font-weight: ${({ theme: { bold } }) => bold};
@@ -19,6 +22,14 @@ export const GlobalStyle = createGlobalStyle`
   }
   h3, h4 {
     color: ${({ theme: { secondary } }) => secondary};
+  }
+
+  button, label {
+    font-weight: ${({ theme: { bold } }) => bold};
+  }
+  ::selection {
+    background: ${({ theme: { secondary } }) => secondary};
+    color: ${({ theme: { text } }) => text};
   }
 
 `;

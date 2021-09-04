@@ -4,19 +4,11 @@ import styled from 'styled-components';
 const StyledCurvedSVG = styled.svg`
   position: absolute;
   z-index: -1;
-  /* width: 350vw; */
-  /* height: 100vh; */
-  /* width: 700px; */
-  width: 187vw;
-  /* height: 400px; */
-  height: 60vh;
-  background: transparent;
-  overflow-x: hidden;
-  transform: translateX(-45%);
+  right: 0;
   & * {
     transition: fill 3s;
   }
-  ${({ bottom }) => (bottom ? 'bottom: 0' : 'top: 0')};
+  ${({ bottom }) => (bottom ? 'bottom: 0;  ' : 'top: 0; ')};
   .a {
     fill: ${({ dayMode }) => (dayMode ? '#c7273f' : '#203D49')};
   }

@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from '@/components/reusables/Buttons/Button';
 const StyledHeroCTA = styled.div`
-  width: 100%;
-  height: 50%;
+  /* width: 100%; */
+  /* height: 50%; */
   margin-top: 30%;
 
   & * {
-    transition: color 2s, background-color 2s;
+    transition: color 3s, background-color 3s;
   }
   .CTA__Title {
     text-align: center;
@@ -23,7 +23,6 @@ const StyledHeroCTA = styled.div`
   }
   .CTA__button-container {
     display: flex;
-    width: 100%;
 
     .CTA__button--left {
       margin: 0 1.2rem 0 auto;

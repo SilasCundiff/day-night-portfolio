@@ -8,8 +8,8 @@ const StyledContainer = styled.div`
   margin: 0;
 `;
 
-function Container({ children }) {
-  return <StyledContainer>{children}</StyledContainer>;
+function Container({ children, ...rest }) {
+  return <StyledContainer {...rest}>{children}</StyledContainer>;
 }
 
 export default Container;

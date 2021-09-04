@@ -4,14 +4,14 @@ import styled from 'styled-components';
 const StyledButton = styled.button`
   min-height: 48px;
   min-width: 120px;
-  border-radius: 0;
   outline: none;
-  border: none;
-  color: ${({ theme: { primary } }) => primary};
   background-color: ${({ theme: { secondary } }) => secondary};
-  font-size: 1.25rem;
+  border: none;
+  border-radius: 0;
   padding: 0.5rem 1.5rem;
-
+  color: ${({ theme: { primary } }) => primary};
+  font-size: 1.25rem;
+  text-transform: uppercase;
   ${({ ghost }) =>
     ghost &&
     `

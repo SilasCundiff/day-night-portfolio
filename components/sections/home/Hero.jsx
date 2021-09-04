@@ -3,9 +3,8 @@ import HeroStarfield from './HeroStarfield';
 import HeroDaycycle from './HeroDaycycle';
 import HeroCTA from './HeroCTA';
 const StyledHero = styled.div`
-  width: 100vw;
-  height: 100vh;
   position: relative;
+  height: 100vh;
   overflow: hidden;
 `;
 

@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import CurvedSVG from '@/components/reusables/CurvedSVG';
 import Container from '@/components/reusables/Container';
+import { useDayModeContext } from '@/contexts/DayModeContext';
+
 const StyledAbout = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: fit-content;
+
+  /* height: fit-content; */
   overflow-x: hidden;
 
   h3 {
@@ -14,31 +16,54 @@ const StyledAbout = styled.div`
     margin-bottom: 1rem;
   }
   .about__header {
-    margin-top: 33vh;
-    margin-inline: auto;
-    margin-bottom: 25vh;
+    margin-top: 55vh;
+    /* margin-inline: auto; */
+    margin-bottom: 15vh;
     width: 75%;
   }
   .about__excerpt {
     max-width: 90vw;
     padding: 1%;
-    margin-bottom: 15vh;
   }
   .about__excerpt__content {
     line-height: 1.65rem;
     margin-bottom: 1.65rem;
   }
+  .about__excerpt--introduction {
+    margin-bottom: 45vh;
+  }
+  .about__excerpt--flavor {
+    margin-bottom: 15vh;
+  }
+  .about__excerpt--introduction,
+  .about__excerpt--introduction .about__excerpt__header {
+    color: ${({ theme: { primary } }) => primary};
+  }
+  .about__header.nightModeStyle {
+    background: ${({ theme: { gradient } }) => gradient};
+    background-clip: text;
+    color: transparent;
+  }
+  .nightModeStyle .about__excerpt--introduction .about__excerpt__header {
+    color: ${({ theme: { secondary } }) => secondary};
+  }
+  .nightModeStyle .about__excerpt--introduction {
+    color: ${({ theme: { text } }) => text};
+  }
 `;
 
 function About() {
+  const { dayMode } = useDayModeContext();
   return (
     <StyledAbout>
       <CurvedSVG />
       <Container>
-        <h2 className='about__header'>A little about me.</h2>
-        <div className='about__container'>
+        <h2 className={`about__header ${!dayMode ? 'nightModeStyle' : ''}`}>
+          A little about me.
+        </h2>
+        <div className={`about__container ${!dayMode ? 'nightModeStyle' : ''}`}>
           <section className='about__excerpt about__excerpt--introduction'>
-            <h3 about__excerpt__header>Hey, I&apos;m Silas</h3>
+            <h3 className='about__excerpt__header'>Hey, I&apos;m Silas</h3>
             <p className='about__excerpt__content'>
               I love to design and develop websites that have unique and
               interesting concepts.
@@ -49,7 +74,7 @@ function About() {
             </p>
           </section>
           <section className='about__excerpt about__excerpt--flavor'>
-            <h3 about__excerpt__header about__excerpt__header--flavor>
+            <h3 className='about__excerpt__header about__excerpt__header--flavor'>
               My code philosophy
             </h3>
             <p className='about__excerpt__content'>
@@ -66,7 +91,9 @@ function About() {
           </section>
         </div>
         <section className='about__excerpt about__excerpt--skills'>
-          <h3 about__excerpt__header>What I do, and how I do it.</h3>
+          <h3 className='about__excerpt__header'>
+            What I do, and how I do it.
+          </h3>
           <p className='about__excerpt__content'>
             I’m a full-stack developer and designer. From initial project idea
             and UX/UI design, to back-end implementation and problem solving, I

@@ -33,6 +33,12 @@
   - [ ] Fix Sun/Moon Alignment
   - [ ] Improve Hero animation easing
   - [x] Create a day/nightmode context/provider
+  - [ ] About me background parallax
+  - [ ] About me Skills Icons and text highlights
+  - [ ] About me desktop styling
+  - [ ] Fix About me nightmode color of heading and first paragraph.
+  - [ ] Define better divider text.
+  - [ ] Add backend for contact form.
 
 
  ### Container specs

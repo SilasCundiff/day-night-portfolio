@@ -5,8 +5,8 @@ import { BiSun, BiMoon } from 'react-icons/bi';
 
 const StyledThemeToggler = styled.div`
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: 1rem;
+  right: 1rem;
 
   svg {
     font-size: 2rem;
@@ -15,7 +15,6 @@ const StyledThemeToggler = styled.div`
 
 function ThemeToggler() {
   const { dayMode, dayModeToggler } = useDayModeContext();
-  console.log(dayMode);
 
   return (
     <StyledThemeToggler>
