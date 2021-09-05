@@ -49,11 +49,11 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
       - [x] Fix Sun/Moon Alignment
       - [ ] Improve Hero animation easing
   - [ ] About Me
-    - [ ] Make Responsive
+    - [x] Make Responsive
     - [ ] About me background parallax
     - [ ] About me Skills Icons and text highlights
-    - [ ] About me desktop styling
-    - [ ] Fix About me nightmode color of heading and first paragraph.
+    - [x] About me desktop styling
+    - [x] Fix About me nightmode color of heading and first paragraph.
   - [ ] Projects
     - [ ] Make Responsive
     - [ ] Define better projects divider text. 
@@ -63,5 +63,3 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
     - [ ] Add backend for contact form.
 
 
- ### Container specs
-  At 1920 - 1160 with 380 gutters on both sides (19.8% margin)
