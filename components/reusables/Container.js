@@ -2,10 +2,19 @@ import styled from 'styled-components';
 
 const StyledContainer = styled.div`
   width: 100%;
-  max-width: 1160px;
-  margin: 0 19.8%; //large
+  max-width: 460px;
+  /* margin: 0 19.8%; //large */
   padding: 2%;
-  margin: 0;
+  margin: 0 auto;
+  @media only screen and (min-width: 600px) {
+    max-width: 600px;
+  }
+  @media only screen and (min-width: 1280px) {
+    max-width: 1100px;
+  }
+  @media only screen and (min-width: 1600px) {
+    max-width: 1380px;
+  }
 `;
 
 function Container({ children, ...rest }) {

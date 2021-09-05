@@ -7,23 +7,26 @@ const StyledAbout = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-
-  /* height: fit-content; */
   overflow-x: hidden;
 
+  h2 {
+    max-width: 400px;
+  }
+
   h3 {
-    font-size: 1.25rem;
+    font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1920 - 300)));
     margin-bottom: 1rem;
   }
+
   .about__header {
-    margin-top: 55vh;
-    /* margin-inline: auto; */
+    margin-top: 50vh;
     margin-bottom: 15vh;
     width: 75%;
   }
   .about__excerpt {
     max-width: 90vw;
     padding: 1%;
+    font-size: calc(20px + (20 - 16) * ((100vw - 300px) / (1920 - 300)));
   }
   .about__excerpt__content {
     line-height: 1.65rem;
@@ -49,6 +52,80 @@ const StyledAbout = styled.div`
   }
   .nightModeStyle .about__excerpt--introduction {
     color: ${({ theme: { text } }) => text};
+  }
+  @media only screen and (min-width: 600px) {
+    .about__header {
+      margin-top: 35vh;
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .about__header {
+      margin-inline: auto;
+    }
+    h2 {
+      max-width: 780px;
+    }
+
+    .about__container {
+      display: flex;
+      .about__excerpt {
+        flex: 1 1 100%;
+        margin-top: 0;
+        padding: 3%;
+      }
+      .about__excerpt--introduction,
+      .about__excerpt--flavor {
+        margin-bottom: 15vh;
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .about__header {
+      margin-top: 28vh;
+    }
+  }
+  @media only screen and (min-width: 1920px) {
+    h2 {
+      max-width: 600px;
+    }
+    .about__container {
+      justify-content: space-between;
+      .about__excerpt {
+        padding: 2% 5%;
+      }
+    }
+    .about__header {
+      margin: 38vh 0 5vh;
+      padding: 0 5%;
+      background: ${({ theme: { gradient } }) => gradient};
+      background-clip: text;
+      color: transparent;
+    }
+    .about__excerpt {
+      padding: 0 5%;
+      margin-top: 15vh;
+    }
+    .about__excerpt--introduction,
+    .about__excerpt--introduction .about__excerpt__header {
+      color: ${({ theme: { secondary } }) => secondary};
+      & p {
+        color: ${({ theme: { text } }) => text};
+      }
+    }
+    .about__excerpt .about__excerpt__header--flavor {
+      color: ${({ theme: { primary } }) => primary};
+    }
+
+    .about__excerpt--flavor .about__excerpt__content {
+      color: ${({ theme: { primary } }) => primary};
+    }
+    .nightModeStyle .about__excerpt .about__excerpt__header--flavor {
+      color: ${({ theme: { secondary } }) => secondary};
+    }
+
+    .nightModeStyle .about__excerpt--flavor .about__excerpt__content {
+      color: ${({ theme: { text } }) => text};
+    }
   }
 `;
 

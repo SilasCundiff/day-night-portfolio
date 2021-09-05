@@ -4,10 +4,8 @@ import { ProjectCuisineQuest } from './ProjectDisplay';
 import Divider from './Divider';
 
 const StyledProjects = styled.div`
-  .divider__subheader {
-    font-size: 1rem;
-    letter-spacing: 1rem;
-    margin-top: 1rem;
+  .divider__header {
+    font-size: calc(38px + (96 - 38) * ((100vw - 300px) / (1920 - 300)));
   }
 `;
 
@@ -15,8 +13,9 @@ function Projects() {
   return (
     <StyledProjects>
       <Divider>
-        <h2 className='divider__header'>Talk is cheap, Projects hold value.</h2>
-        <span className='divider__subheader'>Let me show you my worth.</span>
+        <h2 className='divider__header'>
+          Let me show you some of my projects to prove my skills.
+        </h2>
       </Divider>
       <ProjectCuisineQuest />
       <ProjectCuisineQuest />

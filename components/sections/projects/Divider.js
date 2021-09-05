@@ -8,6 +8,9 @@ const StyledDivider = styled.div`
   padding: 5%;
   margin-block: 20vh 50vh;
   background: ${({ theme: { gradient } }) => gradient};
+  @media only screen and (min-width: 1280px) {
+    height: 45vh;
+  }
 `;
 
 function Divider({ children }) {

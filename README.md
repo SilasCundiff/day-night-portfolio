@@ -33,6 +33,7 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
 
   ## TODO
   - [ ] General
+    - [ ] Make Responsive
     - [ ] Add Nav
     - [ ] Add Social Links floater
     - [ ] Add links to all buttons
@@ -41,20 +42,24 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
     - [x] Create a day/nightmode context/provider
     - [ ] Create custom toggle animation for day/night toggler
   - [ ] Hero/Home
+    - [x] Make Responsive
     - [ ] Animation specific
       - [ ] Add debouncer to prevent day/night toggle spam
       - [ ] Optimize Hero (disable animation and toggle debouncer when hero is not in view)
-      - [ ] Fix Sun/Moon Alignment
+      - [x] Fix Sun/Moon Alignment
       - [ ] Improve Hero animation easing
   - [ ] About Me
+    - [ ] Make Responsive
     - [ ] About me background parallax
     - [ ] About me Skills Icons and text highlights
     - [ ] About me desktop styling
     - [ ] Fix About me nightmode color of heading and first paragraph.
   - [ ] Projects
+    - [ ] Make Responsive
     - [ ] Define better projects divider text. 
     - [ ] Add background
   - [ ] Contact
+    - [ ] Make Responsive
     - [ ] Add backend for contact form.
 
 
