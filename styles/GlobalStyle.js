@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   h1, h2 {
     font-size: 3rem;
+    font-size: calc(48px + (96 - 48) * ((100vw - 300px) / (1920 - 300)));
     color: ${({ theme: { primary } }) => primary};
   }
   h3, h4 {

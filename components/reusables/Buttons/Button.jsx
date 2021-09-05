@@ -8,9 +8,9 @@ const StyledButton = styled.button`
   background-color: ${({ theme: { secondary } }) => secondary};
   border: none;
   border-radius: 0;
-  padding: 0.5rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   color: ${({ theme: { primary } }) => primary};
-  font-size: 1.25rem;
+  font-size: calc(16px + (28 - 16) * (100vw - 300px) / (1920 - 300));
   text-transform: uppercase;
   ${({ ghost }) =>
     ghost &&

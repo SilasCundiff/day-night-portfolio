@@ -1,3 +1,4 @@
+import { useDayModeContext } from '@/contexts/DayModeContext';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
@@ -22,19 +23,27 @@ const StyledHeroStarfield = styled.div`
   }
   .stars {
     background: url(./images/stars.png);
+    transition: opacity 3s;
   }
   .twinkling {
     background: transparent url(./images/twinkling.png) repeat top center;
-    animation: ${({ dayMode }) => !dayMode && twinklingAnima} 300s linear
-      infinite;
+    /* animation: ${({ dayMode }) => !dayMode && twinklingAnima} 300s linear
+      infinite; */
+  }
+  .fadeOut {
+    opacity: 0;
+  }
+  .fadeIn {
+    opacity: 1;
   }
 `;
 
-function HeroStarfield({ dayMode }) {
+function HeroStarfield() {
+  const { dayMode } = useDayModeContext();
   return (
     <StyledHeroStarfield dayMode={dayMode}>
-      <div className='stars'></div>
-      <div className={`twinkling`}></div>
+      <div className={`stars ${dayMode ? 'fadeOut' : 'fadeIn'}`}></div>
+      <div className={`twinkling ${dayMode ? 'fadeOut' : 'fadeIn'}`}></div>
     </StyledHeroStarfield>
   );
 }
