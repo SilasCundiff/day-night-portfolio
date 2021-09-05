@@ -8,6 +8,12 @@ const StyledDesktopImage = styled.div`
     aspect-ratio: 16 / 9;
     position: relative;
   }
+  @media only screen and (min-width: 1280px) {
+    & .image-wrapper {
+      width: 100%;
+    }
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  }
 `;
 
 export const DesktopImage = ({ children }) => (

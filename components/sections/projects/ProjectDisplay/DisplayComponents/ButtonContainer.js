@@ -9,6 +9,13 @@ const StyledButtonContainer = styled.div`
   & button:last-of-type {
     color: ${({ theme: { accent } }) => accent};
   }
+  @media only screen and (min-width: 1280px) {
+    /* max-width: 50%; */
+    flex-direction: row;
+    & button {
+      margin: 1rem 3rem 0 0;
+    }
+  }
 `;
 
 export const ButtonContainer = ({ children }) => (

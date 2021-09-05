@@ -2,7 +2,12 @@ import styled from 'styled-components';
 
 const StyledMobileImage = styled.div`
   margin-bottom: 1rem;
-  & .image-wrapper {
+  @media only screen and (min-width: 1280px) {
+    position: absolute;
+    bottom: -10%;
+    right: 10%;
+    width: 360px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   }
 `;
 

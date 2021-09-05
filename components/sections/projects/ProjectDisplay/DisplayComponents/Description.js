@@ -5,6 +5,10 @@ const StyledDescription = styled.div`
   font-weight: ${({ theme: { thin } }) => thin};
   color: ${({ theme: { accent } }) => accent};
   margin-bottom: 1rem;
+  @media only screen and (min-width: 1280px) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const Description = ({ children }) => (
