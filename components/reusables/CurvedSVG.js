@@ -5,6 +5,8 @@ const StyledCurvedSVG = styled.svg`
   position: absolute;
   z-index: -1;
   right: 0;
+  width: 1920px;
+  height: 1110px;
   & * {
     transition: fill 3s;
   }
@@ -21,6 +23,13 @@ const StyledCurvedSVG = styled.svg`
   .d {
     fill: ${({ dayMode }) => (dayMode ? '#2f112d' : '#091215')};
   }
+  @media only screen and (min-width: 1921px) {
+    width: auto;
+    height: auto;
+  }
+
+  /* width='1920' */
+  /* height='1110' */
 `;
 
 function CurvedSVG({ bottom }) {
@@ -28,8 +37,6 @@ function CurvedSVG({ bottom }) {
   return (
     <StyledCurvedSVG
       bottom={bottom}
-      width='1920'
-      height='1110'
       viewBox='0 0 1920 1110'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'

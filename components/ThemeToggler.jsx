@@ -5,9 +5,16 @@ import { BiSun, BiMoon } from 'react-icons/bi';
 
 const StyledThemeToggler = styled.div`
   position: fixed;
-  top: 1rem;
-  right: 1rem;
-
+  top: 1.5rem;
+  right: 1.8rem;
+  background: ${({ theme: { primary } }) => primary};
+  padding: 8px;
+  border-radius: 5px;
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   svg {
     font-size: 2rem;
   }

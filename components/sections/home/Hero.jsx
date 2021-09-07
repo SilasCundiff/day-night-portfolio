@@ -13,7 +13,6 @@ const Hero = () => {
     <StyledHero>
       <HeroCTA />
       <HeroDaycycle />
-      {/* <HeroStarfield /> */}
     </StyledHero>
   );
 };

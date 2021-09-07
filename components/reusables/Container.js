@@ -4,7 +4,7 @@ const StyledContainer = styled.div`
   width: 100%;
   max-width: 460px;
   /* margin: 0 19.8%; //large */
-  padding: 2%;
+
   margin: 0 auto;
   @media only screen and (min-width: 600px) {
     max-width: 600px;
@@ -14,6 +14,9 @@ const StyledContainer = styled.div`
   }
   @media only screen and (min-width: 1600px) {
     max-width: 1380px;
+  }
+  @media only screen and (min-width: 2000px) {
+    max-width: 1680px;
   }
 `;
 

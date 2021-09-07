@@ -55,8 +55,8 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
     - [x] About me desktop styling
     - [x] Fix About me nightmode color of heading and first paragraph.
   - [ ] Projects
-    - [ ] Make Responsive
-    - [ ] Define better projects divider text. 
+    - [x] Make Responsive
+    - [x] Define better projects divider text. 
     - [ ] Add background
   - [ ] Contact
     - [ ] Make Responsive
