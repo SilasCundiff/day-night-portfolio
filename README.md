@@ -35,7 +35,9 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
   - [ ] General
     - [ ] Make Responsive
     - [ ] Add Nav
-    - [ ] Add Social Links floater
+    - [x] Add Social Links floater
+      - [ ] Remove toggler on desktop
+      - [ ] Add desktop styling
     - [ ] Add links to all buttons
     - [ ] Add media queries/styles for larger screens
     - [ ] Additional optimizations for mobile (disable some animations, etc)
@@ -59,7 +61,7 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
     - [x] Define better projects divider text. 
     - [ ] Add background
   - [ ] Contact
-    - [ ] Make Responsive
+    - [x] Make Responsive
     - [ ] Add backend for contact form.
 
 
