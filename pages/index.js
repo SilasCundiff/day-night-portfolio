@@ -5,6 +5,8 @@ import About from '@/components/sections/about';
 import Projects from '@/components/sections/projects';
 import Contact from '@/components/sections/contact';
 import SocialFloater from '@/components/SocialFloater';
+import NavBar from '@/components/Navs/NavBar';
+
 export default function MainPage({ dayMode, dayModeToggler }) {
   return (
     <div>
@@ -17,6 +19,7 @@ export default function MainPage({ dayMode, dayModeToggler }) {
         {/* TODO update favicon */}
         {/* <link rel='icon' href='/favicon.ico' /> */}
       </Head>
+      <NavBar />
       <SocialFloater />
       <Home dayModeToggler={dayModeToggler} dayMode={dayMode} />
       <About />

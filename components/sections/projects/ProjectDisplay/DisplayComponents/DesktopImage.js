@@ -10,7 +10,7 @@ const StyledDesktopImage = styled.div`
   }
   @media only screen and (min-width: 1280px) {
     & .image-wrapper {
-      width: 100%;
+      width: 80%;
     }
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   }

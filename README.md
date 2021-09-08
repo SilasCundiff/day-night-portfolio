@@ -36,16 +36,17 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
     - [ ] Make Responsive
     - [ ] Add Nav
     - [x] Add Social Links floater
-      - [ ] Remove toggler on desktop
-      - [ ] Add desktop styling
+      - [x] Remove toggler on desktop
+      - [x] Add desktop styling
     - [ ] Add links to all buttons
     - [ ] Add media queries/styles for larger screens
     - [ ] Additional optimizations for mobile (disable some animations, etc)
     - [x] Create a day/nightmode context/provider
     - [ ] Create custom toggle animation for day/night toggler
+    - [x] Add 404 page
   - [ ] Hero/Home
     - [x] Make Responsive
-    - [ ] Animation specific
+    - [ ] Hero Animation specific
       - [ ] Add debouncer to prevent day/night toggle spam
       - [ ] Optimize Hero (disable animation and toggle debouncer when hero is not in view)
       - [x] Fix Sun/Moon Alignment
@@ -62,6 +63,7 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
     - [ ] Add background
   - [ ] Contact
     - [x] Make Responsive
-    - [ ] Add backend for contact form.
+    - [x] Add backend for contact form.
+    - [x] Add Success page
 
 

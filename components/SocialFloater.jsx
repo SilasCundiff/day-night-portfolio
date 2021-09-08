@@ -39,6 +39,7 @@ const StyledSocialFloater = styled.div`
   .social-menu__icon-wrapper {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     & svg {
       margin: 0.5rem auto 0;
     }
@@ -56,12 +57,43 @@ const StyledSocialFloater = styled.div`
   .slideOut {
     transform: translateX(-100vw);
   }
+  @media only screen and (min-width: 1280px) {
+    top: 50%;
+    transform: translateY(-50%);
+    .toggler {
+      display: none;
+    }
+    .social-menu--desktop {
+      background: none;
+      transform: translateX(0);
+      margin: 0.2rem;
+    }
+    .social-menu__icon-name {
+      opacity: 0;
+      color: ${({ theme: { secondary } }) => secondary};
+      transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .social-menu__icon-wrapper:hover .social-menu__icon-name {
+      opacity: 1;
+      color: ${({ theme: { secondary } }) => secondary};
+    }
+    .social-menu__icon-wrapper svg {
+      margin: 0 auto 0;
+
+      transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .social-menu__icon-wrapper:hover svg {
+      opacity: 1;
+
+      color: ${({ theme: { secondary } }) => secondary};
+    }
+  }
 `;
 
 function SocialFloater() {
   const { dayMode } = useDayModeContext();
 
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
 
   const handleToggle = () => {
     setMenuOpen(!menuOpen);
@@ -73,7 +105,11 @@ function SocialFloater() {
         <IconContext.Provider
           value={{ color: `${dayMode ? '#C7273F' : '#11A9E6'}` }}
         >
-          <span className={`social-menu ${menuOpen ? 'slideOut' : 'slideIn'}`}>
+          <span
+            className={`social-menu ${
+              menuOpen ? 'slideOut' : 'slideIn'
+            } social-menu--desktop`}
+          >
             <span className='social-menu__icon-wrapper'>
               <Link passHref href='https://github.com/SilasCundiff'>
                 <FiGithub />

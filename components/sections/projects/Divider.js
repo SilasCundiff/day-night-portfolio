@@ -10,6 +10,7 @@ const StyledDivider = styled.div`
   background: ${({ theme: { gradient } }) => gradient};
   @media only screen and (min-width: 1280px) {
     height: 45vh;
+    padding: 5% 10%;
   }
 `;
 

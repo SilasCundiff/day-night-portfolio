@@ -46,11 +46,17 @@ const StyledForm = styled.form`
 `;
 
 function Form() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
   return (
-    <StyledForm onSubmit={handleSubmit}>
+    <StyledForm
+      name='contact'
+      method='POST'
+      data-netlify='true'
+      action='/success'
+    >
+      <input type='hidden' name='form-name' value='contact' />
       <div className='contact-form__field-wrapper'>
         <label className='contact-form__field-label' htmlFor='name'>
           Name
@@ -60,6 +66,7 @@ function Form() {
           type='text'
           id='name'
           name='name'
+          required
         />
       </div>
       <div className='contact-form__field-wrapper'>
@@ -68,9 +75,10 @@ function Form() {
         </label>
         <input
           className='contact-form__field-input'
-          type='text'
+          type='email'
           id='email'
           name='email'
+          required
         />
       </div>
       <div className='contact-form__field-wrapper'>
@@ -82,6 +90,7 @@ function Form() {
           id='message'
           name='message'
           rows='4'
+          required
         />
       </div>
       <Button ghost className='contact-form__button' type='submit'>
