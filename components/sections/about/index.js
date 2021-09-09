@@ -45,6 +45,7 @@ const StyledAbout = styled.div`
   .about__header.nightModeStyle {
     background: ${({ theme: { gradient } }) => gradient};
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
   }
   .nightModeStyle .about__excerpt--introduction .about__excerpt__header {
@@ -100,6 +101,7 @@ const StyledAbout = styled.div`
       background: ${({ theme: { gradient } }) => gradient};
       background-clip: text;
       color: transparent;
+      -webkit-background-clip: text;
     }
     .about__excerpt {
       padding: 0 5%;
