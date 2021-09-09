@@ -7,7 +7,6 @@ import Form from './Form';
 import Button from '@/components/reusables/Buttons/Button';
 import Link from 'next/link';
 const StyledContact = styled.div`
-  /* display: flex; */
   position: relative;
   height: 200vh;
 
@@ -35,6 +34,7 @@ const StyledContact = styled.div`
     padding-bottom: 2rem;
     background: ${({ theme: { gradient } }) => gradient};
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
   }
   .flipper {
