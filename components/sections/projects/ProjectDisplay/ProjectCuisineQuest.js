@@ -3,6 +3,7 @@ import Display from './Display';
 import Image from 'next/image';
 import Button from '@/components/reusables/Buttons/Button';
 import Container from '@/components/reusables/Container';
+import Link from 'next/link';
 
 const StyledProjectCuisineQuest = styled.div``;
 
@@ -40,8 +41,14 @@ function ProjectCuisineQuest() {
               A recipe search app with mongoDB.
             </Display.Description>
             <Display.ButtonContainer>
-              <Button>Live Demo</Button>
-              <Button ghost>View on github</Button>
+              <Button>
+                <Link href='https://cuisinequest.app/'>Live Demo</Link>
+              </Button>
+              <Button ghost>
+                <Link href='https://github.com/SilasCundiff/cuisinequest/tree/V2'>
+                  View on github
+                </Link>
+              </Button>
             </Display.ButtonContainer>
           </Display.Footer>
         </Display>

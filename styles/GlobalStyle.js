@@ -25,7 +25,10 @@ export const GlobalStyle = createGlobalStyle`
   h3, h4 {
     color: ${({ theme: { secondary } }) => secondary};
   }
-
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   button, label {
     font-weight: ${({ theme: { bold } }) => bold};
   }
