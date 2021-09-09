@@ -4,20 +4,23 @@ import { FaTimes, FaBars } from 'react-icons/fa';
 import { useNavContext } from '../NavContext';
 
 const StyledNavControl = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
-  width: 2rem;
-  padding: 2rem;
-  cursor: pointer;
-  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   z-index: 1000;
+  height: 1rem;
+  width: 1rem;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+  background: ${({ theme: { secondary } }) => secondary};
   color: ${({ theme: { primary } }) => primary};
+  font-size: 2rem;
+  cursor: pointer;
+
   .nav-control-open,
   .nav-control-close {
     position: absolute;

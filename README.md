@@ -35,6 +35,8 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
   - [ ] General
     - [ ] Make Responsive
     - [ ] Add Nav
+      - [ ] Add Logo Icon
+      - [ ] Make Links function
     - [x] Add Social Links floater
       - [x] Remove toggler on desktop
       - [x] Add desktop styling

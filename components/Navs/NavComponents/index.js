@@ -5,3 +5,4 @@ export * from './ItemContainer';
 export * from './List';
 export * from './ListItem';
 export * from './Logo';
+export * from './Wrapper';
