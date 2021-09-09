@@ -33,15 +33,15 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
 
   ## TODO
   - [ ] General
-    - [ ] Make Responsive
-    - [ ] Add Nav
-      - [ ] Add Logo Icon
-      - [ ] Make Links function
+    - [x] Make Responsive
+    - [x] Add Nav
+      - [x] Add Logo Icon
+      - [x] Make Links function
     - [x] Add Social Links floater
       - [x] Remove toggler on desktop
       - [x] Add desktop styling
-    - [ ] Add links to all buttons
-    - [ ] Add media queries/styles for larger screens
+    - [x] Add links to all buttons
+    - [x] Add media queries/styles for larger screens
     - [ ] Additional optimizations for mobile (disable some animations, etc)
     - [x] Create a day/nightmode context/provider
     - [ ] Create custom toggle animation for day/night toggler
