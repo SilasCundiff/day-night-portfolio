@@ -8,7 +8,7 @@ const StyledAbout = styled.div`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-
+  padding: 1rem;
   h2 {
     max-width: 400px;
   }
@@ -132,7 +132,7 @@ const StyledAbout = styled.div`
 function About() {
   const { dayMode } = useDayModeContext();
   return (
-    <StyledAbout>
+    <StyledAbout id='about'>
       <CurvedSVG />
       <Container>
         <h2 className={`about__header ${!dayMode ? 'nightModeStyle' : ''}`}>

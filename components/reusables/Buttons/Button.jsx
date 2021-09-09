@@ -12,6 +12,11 @@ const StyledButton = styled.button`
   color: ${({ theme: { primary } }) => primary};
   font-size: calc(16px + (28 - 16) * (100vw - 300px) / (1920 - 300));
   text-transform: uppercase;
+  cursor: pointer;
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
   ${({ ghost }) =>
     ghost &&
     `

@@ -4,7 +4,7 @@ const StyledDivider = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 85vh;
+  height: 100vh;
   padding: 5%;
   margin-block: 20vh 50vh;
   background: ${({ theme: { gradient } }) => gradient};

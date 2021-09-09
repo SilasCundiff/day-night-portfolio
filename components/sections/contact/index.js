@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import CurvedSVG from '@/components/reusables/CurvedSVG';
 import Container from '@/components/reusables/Container';
-import Divider from '../projects/Divider';
+
 import Form from './Form';
 import Button from '@/components/reusables/Buttons/Button';
+import Link from 'next/link';
 const StyledContact = styled.div`
   /* display: flex; */
   position: relative;
@@ -20,10 +21,18 @@ const StyledContact = styled.div`
   .contact__github {
     width: 80%;
     margin: 10vh auto 15vh;
+    .contact__button-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 80%;
+      & button:last-of-type {
+        margin-top: 1rem;
+      }
+    }
   }
   .contact__github--heading {
     margin-bottom: 0.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     background: ${({ theme: { gradient } }) => gradient};
     background-clip: text;
     color: transparent;
@@ -42,7 +51,19 @@ const StyledContact = styled.div`
     width: 100%;
     text-align: center;
   }
-
+  @media only screen and (min-width: 1280px) {
+    .contact__github {
+      .contact__button-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 80%;
+        & button:last-of-type {
+          margin-top: 0;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
   @media only screen and (min-width: 1920px) {
     height: 120vh;
     .contact__github {
@@ -61,26 +82,26 @@ const StyledContact = styled.div`
       left: 0;
     }
   }
-  @media only screen and (min-width: 2500px) {
-    .contact__github {
-      /* max-width: 50%; */
-    }
-    .contact__container {
-      /* max-width: 1840px; */
-    }
-  }
 `;
 
 function Contact() {
   return (
-    <StyledContact>
-      {/* <Divider>For more projects, check out my github</Divider> */}
+    <StyledContact id='contact'>
       <Container className='contact__container'>
         <Container className='contact__github'>
           <h2 className='contact__github--heading'>
             For more projects, <br /> check out my github
           </h2>
-          <Button>Github</Button>
+          <div className='contact__button-container'>
+            <Button>
+              <Link href='https://github.com/SilasCundiff'>Github</Link>
+            </Button>
+            <Button>
+              <Link href='/extras/resume.pdf' download>
+                My Resume
+              </Link>
+            </Button>
+          </div>
         </Container>
         <Form />
         <footer className='footer'>Made by Silas Cundiff with NextJS</footer>

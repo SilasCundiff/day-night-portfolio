@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '@/components/reusables/Buttons/Button';
+import Link from 'next/link';
 const StyledHeroCTA = styled.div`
   width: 100%;
 
@@ -43,9 +44,11 @@ function HeroCTA() {
       <h1 className='CTA__Title'>Silas Cundiff</h1>
       <h2 className='CTA__Subtitle'>Designer - Developer - Dreamer</h2>
       <div className='CTA__button-container'>
-        <Button className='CTA__button--left'>My Work</Button>
+        <Button className='CTA__button--left'>
+          <Link href='#projects'>My Work</Link>
+        </Button>
         <Button className='CTA__button--right' ghost>
-          Let&apos;s Chat
+          <Link href='#contact'>Let&apos;s Chat</Link>
         </Button>
       </div>
     </StyledHeroCTA>

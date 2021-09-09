@@ -29,6 +29,9 @@ const StyledSocialFloater = styled.div`
     margin: 0.5rem;
     & svg {
       margin: auto;
+      & * {
+        transition: color 3s;
+      }
     }
   }
   .social-menu svg {
@@ -42,6 +45,9 @@ const StyledSocialFloater = styled.div`
     cursor: pointer;
     & svg {
       margin: 0.5rem auto 0;
+      & * {
+        transition: color 3s;
+      }
     }
     .social-menu__icon-name {
       margin: 0 auto 0.5rem;
@@ -123,7 +129,7 @@ function SocialFloater() {
               <span className='social-menu__icon-name'>LinkedIn</span>
             </span>
             <span className='social-menu__icon-wrapper'>
-              <Link passHref href='#'>
+              <Link passHref href='/extras/resume.pdf' download>
                 <FiPaperclip />
               </Link>
               <span className='social-menu__icon-name'>Resume</span>

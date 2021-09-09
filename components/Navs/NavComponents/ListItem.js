@@ -7,6 +7,7 @@ const StyledNavItem = styled.li`
 
   color: ${({ theme: { secondary } }) => secondary};
   cursor: pointer;
+  transition: color 3s;
   & a {
     text-decoration: none;
     color: inherit;
@@ -15,6 +16,7 @@ const StyledNavItem = styled.li`
     font-size: 1.5rem;
     &:hover {
       color: ${({ theme: { accent } }) => accent};
+      transition: color 0.2s;
     }
   }
 `;

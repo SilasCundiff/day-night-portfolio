@@ -16,8 +16,7 @@ export default function MainPage({ dayMode, dayModeToggler }) {
           name='description'
           content='Portfolio of Silas Cundiff - a Web Designer and Developer'
         />
-        {/* TODO update favicon */}
-        {/* <link rel='icon' href='/favicon.ico' /> */}
+        <link rel='icon' href='/images/favicon.ico' />
       </Head>
       <NavBar />
       <SocialFloater />

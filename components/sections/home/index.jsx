@@ -5,7 +5,7 @@ const StyledHome = styled.div``;
 
 function Home({ dayMode }) {
   return (
-    <StyledHome>
+    <StyledHome id='home'>
       <Hero dayMode={dayMode} />
     </StyledHome>
   );

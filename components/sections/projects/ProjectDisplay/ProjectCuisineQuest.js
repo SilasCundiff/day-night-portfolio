@@ -18,7 +18,7 @@ function ProjectCuisineQuest() {
           <Display.Images>
             <Display.DesktopImage>
               <Image
-                src='/images/cuisinequest_desktop.png'
+                src='/images/cuisinequest-desktop.png'
                 alt='cuisinequest desktop sceenshot'
                 width={1920}
                 height={1080}
@@ -27,7 +27,7 @@ function ProjectCuisineQuest() {
             </Display.DesktopImage>
             <Display.MobileImage>
               <Image
-                src='/images/cuisinequest_mobile.png'
+                src='/images/cuisinequest-mobile.png'
                 alt='cuisinequest mobile sceenshot'
                 width={620}
                 height={1100}

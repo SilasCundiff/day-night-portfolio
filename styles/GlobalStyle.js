@@ -8,10 +8,12 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins';
     background: ${({ theme: { primary } }) => primary};
     color: ${({ theme: { text } }) => text};
-    /* May not need */
-    overflow-x: hidden; 
-    
+    scroll-behavior: smooth;
   }
+  body {
+    overflow-x: hidden;
+  }
+
   h1, h2, h3, h4 {
     font-weight: ${({ theme: { bold } }) => bold};
     line-height: .9;

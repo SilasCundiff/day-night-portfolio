@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import {
   ButtonContainer,
@@ -17,7 +17,7 @@ const StyledNav = styled.nav`
 `;
 
 const Nav = ({ children }) => {
-  const [navOpen, setnavOpen] = useState(true);
+  const [navOpen, setnavOpen] = useState(false);
 
   const handleNavToggle = () => {
     setnavOpen(!navOpen);
@@ -26,6 +26,15 @@ const Nav = ({ children }) => {
   const handleCloseNav = () => {
     setnavOpen(false);
   };
+
+  useEffect(() => {
+    if (navOpen) {
+      document.body.style.overflow = 'hidden';
+    }
+    if (!navOpen) {
+      document.body.style.overflow = 'unset';
+    }
+  }, [navOpen]);
 
   return (
     <NavProvider value={{ navOpen, handleNavToggle, handleCloseNav }}>

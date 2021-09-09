@@ -7,7 +7,7 @@ const StyledNavControl = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   z-index: 1000;
@@ -16,15 +16,15 @@ const StyledNavControl = styled.div`
   margin: 1rem;
   padding: 1.5rem;
   border-radius: 50%;
-  background: ${({ theme: { secondary } }) => secondary};
+  background-color: ${({ theme: { secondary } }) => secondary};
   color: ${({ theme: { primary } }) => primary};
   font-size: 2rem;
   cursor: pointer;
-
+  transition: color 3s, background-color 3s;
   .nav-control-open,
   .nav-control-close {
     position: absolute;
-    transition: all 0.5s;
+    transition: transform 0.5s;
   }
   & .icon-show {
     opacity: 1;

@@ -1,32 +1,39 @@
 import React from 'react';
 import Nav from './Nav';
 import Link from 'next/link';
-
+import LogoSVG from '../reusables/LogoSVG';
 const NavBar = () => {
   return (
     <Nav>
       <Nav.Control />
       <Nav.Wrapper>
-        <Nav.Logo>Silas Cundiff</Nav.Logo>
+        <Nav.Logo>
+          <Link passHref href='#home'>
+            <a>
+              <LogoSVG />
+              Silas Cundiff
+            </a>
+          </Link>
+        </Nav.Logo>
         <Nav.List>
           <Nav.ItemContainer>
-            <Nav.ListItem>
-              <Link passHref href='/'>
+            {/* <Nav.ListItem>
+              <Link passHref href='#home'>
                 <a>Home</a>
               </Link>
-            </Nav.ListItem>
+            </Nav.ListItem> */}
             <Nav.ListItem>
-              <Link passHref href='/'>
+              <Link passHref href='#about'>
                 <a>About</a>
               </Link>
             </Nav.ListItem>
             <Nav.ListItem>
-              <Link passHref href='/'>
+              <Link passHref href='#projects'>
                 <a>Projects</a>
               </Link>
             </Nav.ListItem>
             <Nav.ListItem>
-              <Link passHref href='/'>
+              <Link passHref href='#contact'>
                 <a>Contact</a>
               </Link>
             </Nav.ListItem>
