@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './Nav';
 import Link from 'next/link';
 import LogoSVG from '../reusables/LogoSVG';
+
 const NavBar = () => {
   return (
     <Nav>

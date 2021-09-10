@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useDayModeContext } from '@/contexts/DayModeContext';
 import styled from 'styled-components';
 import { IconContext } from 'react-icons';
@@ -23,11 +24,25 @@ const StyledThemeToggler = styled.div`
 `;
 
 function ThemeToggler() {
-  const { dayMode, dayModeToggler } = useDayModeContext();
+  const { dayMode, dayModeToggler, heroInView } = useDayModeContext();
+  const [disabled, setDisabled] = useState(false);
+
+  const dayModeTogglerWithDebouncer = () => {
+    if (!heroInView) {
+      return dayModeToggler();
+    }
+    if (heroInView && !disabled) {
+      setDisabled(true);
+      dayModeToggler();
+      setTimeout(() => {
+        setDisabled(false);
+      }, 2050);
+    }
+  };
 
   return (
     <StyledThemeToggler>
-      <span className='icon' onClick={dayModeToggler}>
+      <span className='icon' onClick={dayModeTogglerWithDebouncer}>
         <IconContext.Provider
           value={{ color: `${dayMode ? '#C7273F' : '#11A9E6'}` }}
         >

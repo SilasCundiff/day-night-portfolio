@@ -68,7 +68,9 @@ const StyledSocialFloater = styled.div`
   }
   @media only screen and (min-width: 1280px) {
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(0, -50%);
+    transition: all 0.5s;
+    ${({ heroInView }) => heroInView && 'transform: translate(-100%, -50%)'};
     .toggler {
       display: none;
     }
@@ -100,7 +102,7 @@ const StyledSocialFloater = styled.div`
 `;
 
 function SocialFloater() {
-  const { dayMode } = useDayModeContext();
+  const { dayMode, heroInView } = useDayModeContext();
 
   const [menuOpen, setMenuOpen] = useState(true);
 
@@ -110,7 +112,7 @@ function SocialFloater() {
 
   return (
     <>
-      <StyledSocialFloater>
+      <StyledSocialFloater heroInView={heroInView}>
         <IconContext.Provider
           value={{ color: `${dayMode ? '#C7273F' : '#11A9E6'}` }}
         >

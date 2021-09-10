@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useNavContext } from '../NavContext';
-
+import { useDayModeContext } from '@/contexts/DayModeContext';
 const StyledWrapper = styled.span`
   display: flex;
   flex-direction: column;
@@ -31,14 +31,20 @@ const StyledWrapper = styled.span`
     overflow: hidden;
     height: 10vh;
     width: 85vw;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
+    transition: all 0.5s;
+    ${({ heroInView }) => heroInView && 'transform: translate(-50%, -100%)'}
   }
 `;
 
 const Wrapper = ({ children }) => {
   const { navOpen } = useNavContext();
-
-  return <StyledWrapper navOpen={navOpen}>{children}</StyledWrapper>;
+  const { heroInView } = useDayModeContext();
+  return (
+    <StyledWrapper navOpen={navOpen} heroInView={heroInView}>
+      {children}
+    </StyledWrapper>
+  );
 };
 
 export { Wrapper };

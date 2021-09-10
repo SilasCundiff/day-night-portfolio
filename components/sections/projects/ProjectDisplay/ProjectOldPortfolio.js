@@ -4,12 +4,16 @@ import Image from 'next/image';
 import Button from '@/components/reusables/Buttons/Button';
 import Container from '@/components/reusables/Container';
 import Link from 'next/link';
-const StyledProjectOldPortfolio = styled.div``;
+const StyledProjectOldPortfolio = styled.div`
+  .oldPortfolio__container {
+    margin: 0 5vw 0 auto;
+  }
+`;
 
 function ProjectOldPortfolio() {
   return (
     <StyledProjectOldPortfolio>
-      <Container>
+      <Container className='oldPortfolio__container'>
         <Display>
           <Display.Header>
             <Display.Title>Old Portfolio</Display.Title>
@@ -18,6 +22,7 @@ function ProjectOldPortfolio() {
           <Display.Images>
             <Display.DesktopImage>
               <Image
+                lazyBoundary={'1600px'}
                 src='/images/silvanusdesigns-desktop.png'
                 alt='silvanusdesigns desktop sceenshot'
                 width={1920}
@@ -27,6 +32,7 @@ function ProjectOldPortfolio() {
             </Display.DesktopImage>
             <Display.MobileImage>
               <Image
+                lazyBoundary={'1600px'}
                 src='/images/silvanusdesigns-mobile.png'
                 alt='silvanusdesigns mobile sceenshot'
                 width={620}

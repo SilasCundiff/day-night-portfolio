@@ -5,12 +5,16 @@ import Button from '@/components/reusables/Buttons/Button';
 import Container from '@/components/reusables/Container';
 import Link from 'next/link';
 
-const StyledProjectCuisineQuest = styled.div``;
+const StyledProjectCuisineQuest = styled.div`
+  .cuisineQuest__container {
+    margin: 0 5vw 0 auto;
+  }
+`;
 
 function ProjectCuisineQuest() {
   return (
     <StyledProjectCuisineQuest>
-      <Container>
+      <Container className='cuisineQuest__container'>
         <Display>
           <Display.Header>
             <Display.Title>CuisineQuest</Display.Title>
@@ -19,6 +23,7 @@ function ProjectCuisineQuest() {
           <Display.Images>
             <Display.DesktopImage>
               <Image
+                lazyBoundary={'1600px'}
                 src='/images/cuisinequest-desktop.png'
                 alt='cuisinequest desktop sceenshot'
                 width={1920}
@@ -28,6 +33,7 @@ function ProjectCuisineQuest() {
             </Display.DesktopImage>
             <Display.MobileImage>
               <Image
+                lazyBoundary={'1600px'}
                 src='/images/cuisinequest-mobile.png'
                 alt='cuisinequest mobile sceenshot'
                 width={620}

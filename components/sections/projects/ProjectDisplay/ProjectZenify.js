@@ -5,12 +5,35 @@ import Button from '@/components/reusables/Buttons/Button';
 import Container from '@/components/reusables/Container';
 import Link from 'next/link';
 
-const StyledProjectZenify = styled.div``;
+const shimmer = (w, h) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g">
+      <stop stop-color="#6c2a7c" offset="20%" />
+      <stop stop-color="#222" offset="50%" />
+      <stop stop-color="#6c2a7c" offset="70%" />
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#6c2a7c" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`;
+
+const toBase64 = (str) =>
+  typeof window === 'undefined'
+    ? Buffer.from(str).toString('base64')
+    : window.btoa(str);
+
+const StyledProjectZenify = styled.div`
+  .zenify__container {
+    margin: 0 5vw 0 auto;
+  }
+`;
 
 function ProjectZenify() {
   return (
     <StyledProjectZenify>
-      <Container>
+      <Container className='zenify__container'>
         <Display>
           <Display.Header>
             <Display.Title>Zenify</Display.Title>
@@ -19,6 +42,7 @@ function ProjectZenify() {
           <Display.Images>
             <Display.DesktopImage>
               <Image
+                lazyBoundary={'1600px'}
                 src='/images/zenify-desktop.png'
                 alt='zenify desktop sceenshot'
                 width={1920}
@@ -28,6 +52,7 @@ function ProjectZenify() {
             </Display.DesktopImage>
             <Display.MobileImage>
               <Image
+                lazyBoundary={'1600px'}
                 src='/images/zenify-mobile.png'
                 alt='zenify mobile sceenshot'
                 width={620}

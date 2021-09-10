@@ -35,28 +35,16 @@ const nightModeSegments = [90, 120];
 
 function HeroDaycycle() {
   const { dayMode } = useDayModeContext();
-  // ? Commented out code is for lazy loading and parallax, which I am still debating if I want to add to this component.
-  // const [animationData, setAnimationData] = useState();
-  const [currentSegments, setCurrentSegments] = useState(moonRiseSegments);
-  const [initialPageLoad, setInitialPageLoad] = useState(false);
 
-  // const [offsetY, setOffsetY] = useState(0);
+  const [currentSegments, setCurrentSegments] = useState(moonRiseSegments);
+
+  const [initialPageLoad, setInitialPageLoad] = useState(false);
 
   const resumeAnimation = () => {
     if (currentSegments === nightModeSegments) {
       setCurrentSegments(moonRiseSegments);
     }
   };
-
-  // const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
 
   useEffect(() => {
     if (!dayMode && initialPageLoad) {
@@ -66,19 +54,9 @@ function HeroDaycycle() {
     } else if (!initialPageLoad) {
       setInitialPageLoad(true);
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dayMode, setCurrentSegments]);
-
-  // useEffect(() => {
-  //   const loadData = async () => {
-  //     const data = await import('./hero_assets/daycycle.json');
-
-  //     setAnimationData(data);
-  //   };
-  //   loadData();
-  // }, []);
-
-  // if (!animationData) return <div>Loading...</div>;
 
   return (
     <StyledHeroDaycycle
@@ -87,7 +65,6 @@ function HeroDaycycle() {
       loop={false}
       segments={currentSegments}
       onComplete={resumeAnimation}
-      // offsety={offsetY}
     />
   );
 }

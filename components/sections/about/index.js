@@ -2,13 +2,15 @@ import styled from 'styled-components';
 import CurvedSVG from '@/components/reusables/CurvedSVG';
 import Container from '@/components/reusables/Container';
 import { useDayModeContext } from '@/contexts/DayModeContext';
-
+import { Parallax } from 'react-scroll-parallax';
+import { isBrowser } from 'react-device-detect';
 const StyledAbout = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 1rem;
+
   h2 {
     max-width: 400px;
   }
@@ -19,9 +21,9 @@ const StyledAbout = styled.div`
   }
 
   .about__header {
-    margin-top: 50vh;
-    margin-bottom: 15vh;
-    width: 75%;
+    margin-top: 45vh;
+    margin-bottom: 10vh;
+    width: 80%;
   }
   .about__excerpt {
     max-width: 90vw;
@@ -121,6 +123,9 @@ const StyledAbout = styled.div`
     .about__excerpt--flavor .about__excerpt__content {
       color: ${({ theme: { primary } }) => primary};
     }
+    .about__excerpt--skills {
+      margin-bottom: 50vh;
+    }
     .nightModeStyle .about__excerpt .about__excerpt__header--flavor {
       color: ${({ theme: { secondary } }) => secondary};
     }
@@ -134,13 +139,126 @@ const StyledAbout = styled.div`
       margin: 50vh 0 5vh;
     }
   }
+  .dreams--outer__container {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    z-index: -1;
+    @media only screen and (min-width: 1280px) {
+      width: 100%;
+    }
+  }
+  .designs--outer__container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    @media only screen and (min-width: 1280px) {
+      width: 100%;
+    }
+  }
+  .dreams__container {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+    height: 1200px;
+    font-weight: 900;
+    background: ${({ theme: { gradient } }) => gradient};
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .designs__container {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+    font-weight: 900;
+    height: 1200px;
+    background: ${({ theme: { gradient } }) => gradient};
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .dreams,
+  .designs {
+    font-size: 18rem;
+    overflow: hidden;
+    margin-bottom: 4rem;
+    @media only screen and (min-width: 1280px) {
+      font-size: 16rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .intodesigns,
+  .intoreality {
+    font-size: 9rem;
+    padding-left: 0.5rem;
+    overflow: hidden;
+    @media only screen and (min-width: 1280px) {
+      font-size: 8rem;
+    }
+  }
+  .parallax-inner {
+    height: 100%;
+  }
 `;
-
+console.log('isBrowser :>> ', isBrowser);
+let dreamsY = ['0px', '200px'];
+let dreamsX = ['100%', '-105%'];
+let intoDesignsX = ['-105%', '100%'];
+let designsX = ['-205%', '100%'];
+let designsY = ['0px', '200px'];
+let intoRealityX = ['100%', '-255%'];
 function About() {
   const { dayMode } = useDayModeContext();
+  if (!isBrowser) {
+    dreamsY = ['0px', '200px'];
+    dreamsX = ['100%', '-105%'];
+    intoDesignsX = ['-105%', '100%'];
+    designsX = ['-205%', '100%'];
+    designsY = ['0px', '200px'];
+    intoRealityX = ['100%', '-255%'];
+  }
+  if (isBrowser) {
+    dreamsY = ['0px', '500px'];
+    dreamsX = ['50%', '10%'];
+    intoDesignsX = ['-55%', '25%'];
+    designsX = ['-205%', '10%'];
+    designsY = ['0px', '600px'];
+    intoRealityX = ['100%', '25%'];
+  }
   return (
     <StyledAbout id='about'>
       <CurvedSVG />
+
+      <div className='dreams--outer__container'>
+        <div className='dreams__container'>
+          <Parallax y={dreamsY}>
+            <Parallax x={dreamsX}>
+              <div className='dreams'>DREAMS</div>
+            </Parallax>
+            <Parallax x={intoDesignsX}>
+              <div className='intodesigns'>INTO DESIGNS</div>
+            </Parallax>
+          </Parallax>
+        </div>
+      </div>
+      <div className='designs--outer__container '>
+        <div className='designs__container'>
+          <Parallax y={designsY}>
+            <Parallax x={designsX}>
+              <div className='designs'>DESIGNS</div>
+            </Parallax>
+            <Parallax x={intoRealityX}>
+              <div className='intoreality'>INTO REALITY</div>
+            </Parallax>
+          </Parallax>
+        </div>
+      </div>
       <Container>
         <h2 className={`about__header ${!dayMode ? 'nightModeStyle' : ''}`}>
           A little about me.
