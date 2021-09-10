@@ -49,20 +49,20 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
   - [ ] Hero/Home
     - [x] Make Responsive
     - [ ] Hero Animation specific
-      - [ ] Add debouncer to prevent day/night toggle spam
-      - [ ] Optimize Hero (disable animation and toggle debouncer when hero is not in view)
+      - [x] Add debouncer to prevent day/night toggle spam
+      - [x] Optimize Hero (disable animation and toggle debouncer when hero is not in view)
       - [x] Fix Sun/Moon Alignment
       - [ ] Improve Hero animation easing
   - [ ] About Me
     - [x] Make Responsive
-    - [ ] About me background parallax
+    - [x] About me background parallax
     - [ ] About me Skills Icons and text highlights
     - [x] About me desktop styling
     - [x] Fix About me nightmode color of heading and first paragraph.
   - [ ] Projects
     - [x] Make Responsive
     - [x] Define better projects divider text. 
-    - [ ] Add background
+    - [x] Add background
   - [ ] Contact
     - [x] Make Responsive
     - [x] Add backend for contact form.
