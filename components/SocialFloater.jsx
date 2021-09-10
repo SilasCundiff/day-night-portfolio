@@ -63,6 +63,9 @@ const StyledSocialFloater = styled.div`
   .slideOut {
     transform: translateX(-100vw);
   }
+  .social-menu--link {
+    text-align: center;
+  }
   @media only screen and (min-width: 1280px) {
     top: 50%;
     transform: translateY(-50%);
@@ -118,35 +121,35 @@ function SocialFloater() {
           >
             <span className='social-menu__icon-wrapper'>
               <Link passHref href='https://github.com/SilasCundiff'>
-                <IconLink>
+                <IconLink className='social-menu--link'>
                   <FiGithub />
+                  <span className='social-menu__icon-name'>GitHub</span>
                 </IconLink>
               </Link>
-              <span className='social-menu__icon-name'>GitHub</span>
             </span>
             <span className='social-menu__icon-wrapper'>
               <Link passHref href='https://www.linkedin.com/in/silascundiff/'>
-                <IconLink>
+                <IconLink className='social-menu--link'>
                   <RiLinkedinLine />
+                  <span className='social-menu__icon-name'>LinkedIn</span>
                 </IconLink>
               </Link>
-              <span className='social-menu__icon-name'>LinkedIn</span>
             </span>
             <span className='social-menu__icon-wrapper'>
               <Link passHref href='/extras/resume.pdf' download>
-                <IconLink>
+                <IconLink className='social-menu--link'>
                   <FiPaperclip />
+                  <span className='social-menu__icon-name'>Resume</span>
                 </IconLink>
               </Link>
-              <span className='social-menu__icon-name'>Resume</span>
             </span>
             <span className='social-menu__icon-wrapper'>
               <Link passHref href='mailto:silvanusdesigns@gmail.com'>
-                <IconLink>
+                <IconLink className='social-menu--link'>
                   <HiOutlineMail />
+                  <span className='social-menu__icon-name'>Email</span>
                 </IconLink>
               </Link>
-              <span className='social-menu__icon-name'>Email</span>
             </span>
           </span>
           <span className='toggler' onClick={handleToggle}>
@@ -158,13 +161,15 @@ function SocialFloater() {
   );
 }
 
-export const IconLink = React.forwardRef(({ children, href }, ref) => {
-  return (
-    <a href={href} ref={ref}>
-      {children}
-    </a>
-  );
-});
+export const IconLink = React.forwardRef(
+  ({ children, href, className }, ref) => {
+    return (
+      <a href={href} ref={ref} className={className}>
+        {children}
+      </a>
+    );
+  }
+);
 
 IconLink.displayName = 'IconLink';
 

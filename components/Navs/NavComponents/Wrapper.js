@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useNavContext } from '../NavContext';
 
-const StyledWrapper = styled.li`
+const StyledWrapper = styled.span`
   display: flex;
   flex-direction: column;
   position: fixed;

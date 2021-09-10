@@ -20,6 +20,8 @@ const StyledListItemContainer = styled.ul`
 `;
 
 const ItemContainer = ({ children }) => {
-  return <StyledListItemContainer>{children}</StyledListItemContainer>;
+  return (
+    <StyledListItemContainer role='list'>{children}</StyledListItemContainer>
+  );
 };
 export { ItemContainer };

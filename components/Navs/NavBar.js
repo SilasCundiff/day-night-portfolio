@@ -17,11 +17,6 @@ const NavBar = () => {
         </Nav.Logo>
         <Nav.List>
           <Nav.ItemContainer>
-            {/* <Nav.ListItem>
-              <Link passHref href='#home'>
-                <a>Home</a>
-              </Link>
-            </Nav.ListItem> */}
             <Nav.ListItem>
               <Link passHref href='#about'>
                 <a>About</a>
