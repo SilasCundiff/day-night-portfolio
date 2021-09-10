@@ -96,7 +96,7 @@ const StyledAbout = styled.div`
       }
     }
     .about__header {
-      margin: 38vh 0 5vh;
+      margin: 43vh 0 5vh;
       padding: 0 5%;
       background: ${({ theme: { gradient } }) => gradient};
       background-clip: text;
@@ -127,6 +127,11 @@ const StyledAbout = styled.div`
 
     .nightModeStyle .about__excerpt--flavor .about__excerpt__content {
       color: ${({ theme: { text } }) => text};
+    }
+  }
+  @media only screen and (min-width: 1950px) {
+    .about__header {
+      margin: 50vh 0 5vh;
     }
   }
 `;

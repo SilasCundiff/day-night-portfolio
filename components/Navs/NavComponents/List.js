@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledList = styled.ul`
+const StyledList = styled.div`
   flex: 1 1 80%;
   width: 100%;
   max-height: 75%;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledDesktopImage = styled.div`
-  overflow-x: scroll;
+  overflow-x: auto;
   margin-bottom: 0.5rem;
   & .image-wrapper {
     width: 200vw;

@@ -37,7 +37,7 @@ function ProjectOldPortfolio() {
           </Display.Images>
           <Display.Footer>
             <Display.Description>
-              My previous portfolio. It wasn&apos;t satisfied with it.
+              My previous portfolio. I wasn&apos;t satisfied with it.
             </Display.Description>
             <Display.ButtonContainer>
               <Button>

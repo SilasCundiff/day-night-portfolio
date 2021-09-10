@@ -10,7 +10,8 @@ const StyledHeroCTA = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  & * {
+  & .CTA__Title,
+  .CTA__Subtitle {
     transition: color 3s, background-color 3s;
   }
   .CTA__Title {
