@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useDayModeContext } from '@/contexts/DayModeContext';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -118,25 +118,33 @@ function SocialFloater() {
           >
             <span className='social-menu__icon-wrapper'>
               <Link passHref href='https://github.com/SilasCundiff'>
-                <FiGithub />
+                <IconLink>
+                  <FiGithub />
+                </IconLink>
               </Link>
               <span className='social-menu__icon-name'>GitHub</span>
             </span>
             <span className='social-menu__icon-wrapper'>
               <Link passHref href='https://www.linkedin.com/in/silascundiff/'>
-                <RiLinkedinLine />
+                <IconLink>
+                  <RiLinkedinLine />
+                </IconLink>
               </Link>
               <span className='social-menu__icon-name'>LinkedIn</span>
             </span>
             <span className='social-menu__icon-wrapper'>
               <Link passHref href='/extras/resume.pdf' download>
-                <FiPaperclip />
+                <IconLink>
+                  <FiPaperclip />
+                </IconLink>
               </Link>
               <span className='social-menu__icon-name'>Resume</span>
             </span>
             <span className='social-menu__icon-wrapper'>
               <Link passHref href='mailto:silvanusdesigns@gmail.com'>
-                <HiOutlineMail />
+                <IconLink>
+                  <HiOutlineMail />
+                </IconLink>
               </Link>
               <span className='social-menu__icon-name'>Email</span>
             </span>
@@ -149,5 +157,15 @@ function SocialFloater() {
     </>
   );
 }
+
+export const IconLink = React.forwardRef(({ children, href }, ref) => {
+  return (
+    <a href={href} ref={ref}>
+      {children}
+    </a>
+  );
+});
+
+IconLink.displayName = 'IconLink';
 
 export default SocialFloater;

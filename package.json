@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "babel-preset-next": "^1.4.0",
     "framer-motion": "^4.1.17",
     "lottie-web": "^5.7.13",
     "next": "11.1.2",
