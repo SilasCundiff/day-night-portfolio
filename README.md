@@ -67,5 +67,7 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
     - [x] Make Responsive
     - [x] Add backend for contact form.
     - [x] Add Success page
+  - [ ] Misc
+    - [ ] Reformat Social Floater to be reusable
 
 

@@ -1,14 +1,14 @@
 import { useDayModeContext } from '@/contexts/DayModeContext';
 import styled from 'styled-components';
 import { useInView } from 'react-intersection-observer';
-import InViewTester from '@/components/reusables/InViewTester';
 import HeroDaycycle from './HeroDaycycle';
 import HeroCTA from './HeroCTA';
 import { useEffect } from 'react';
 const StyledHero = styled.div`
   position: relative;
-  height: 100vh;
   overflow: hidden;
+  min-height: 100vh;
+  height: 100%;
 `;
 
 const Hero = () => {
@@ -22,7 +22,6 @@ const Hero = () => {
 
   return (
     <StyledHero ref={ref}>
-      {/* <InViewTester inView={inView} label='hero' /> */}
       <HeroCTA />
       <HeroDaycycle />
     </StyledHero>

@@ -7,19 +7,20 @@ import { BiSun, BiMoon } from 'react-icons/bi';
 const StyledThemeToggler = styled.div`
   position: fixed;
   top: 0;
-  right: 0.5rem;
+  right: 0.5em;
   background: ${({ theme: { primary } }) => primary};
   padding: 0.6rem;
   margin: 0.5rem;
   border-radius: 5px;
-  transition: color 3s, background-color 3s;
+  transition: color 0.5s cubic-bezier(0.77, 0, 0.18, 1),
+    background-color 0.5s cubic-bezier(0.77, 0, 0.18, 1);
   .icon {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   svg {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 4rem);
   }
 `;
 
@@ -36,7 +37,7 @@ function ThemeToggler() {
       dayModeToggler();
       setTimeout(() => {
         setDisabled(false);
-      }, 2050);
+      }, 1050);
     }
   };
 

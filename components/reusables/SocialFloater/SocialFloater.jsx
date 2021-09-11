@@ -4,99 +4,97 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { FiGithub, FiPaperclip } from 'react-icons/fi';
 import { RiLinkedinLine } from 'react-icons/ri';
-import { HiOutlineMail, HiChevronRight, HiChevronLeft } from 'react-icons/hi';
+import { HiOutlineMail } from 'react-icons/hi';
 import { IconContext } from 'react-icons';
+import { Toggler } from './SocialFloaterComponents';
 
 const StyledSocialFloater = styled.div`
   position: fixed;
   z-index: 10;
   display: flex;
   flex-direction: column-reverse;
-  svg {
-    font-size: 1.8rem;
-    padding: 0.8rem;
-  }
-  .toggler,
   .social-menu {
+    margin: 0.5rem;
     background: ${({ theme: { primary } }) => primary};
     border-radius: 5px;
-    margin: 0.5rem;
-    transition: color 3s, background-color 3s;
+    transition: color 0.5s cubic-bezier(0.77, 0, 0.18, 1),
+      background-color 0.5s cubic-bezier(0.77, 0, 0.18, 1);
   }
-  .toggler {
-    display: flex;
-    max-width: 50%;
-    margin: 0.5rem;
-    & svg {
-      margin: auto;
-      & * {
-        transition: color 3s;
-      }
-    }
+
+  svg {
+    font-size: clamp(1.5rem, 2vw, 4rem);
+    padding: 0.6rem;
   }
   .social-menu svg {
-    margin: 0 0.2rem;
     display: flex;
     flex-direction: column;
   }
-  .social-menu__icon-wrapper {
+
+  .link-wrapper {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: ${({ theme: { secondary } }) => secondary};
     & svg {
-      margin: 0.5rem auto 0;
-      & * {
-        transition: color 3s;
-      }
+      margin: 0.5em auto 0;
     }
-    .social-menu__icon-name {
-      margin: 0 auto 0.5rem;
-      padding: 0 0.8rem;
+    .link-icon--text {
+      padding: 0 0.9em;
+      font-size: clamp(0.8rem, 1vw, 1.25rem);
     }
   }
-  .social-menu__icon-wrapper:last-of-type {
-    margin-bottom: 0.5rem;
+
+  .link-wrapper:last-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .social-menu {
+    margin-top: 0.1rem;
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
   }
   .slideIn {
     transform: translateX(0);
   }
   .slideOut {
-    transform: translateX(-100vw);
+    transform: translateX(-50vw);
   }
-  .social-menu--link {
-    text-align: center;
-  }
+
   @media only screen and (min-width: 1280px) {
     top: 50%;
     transform: translate(0, -50%);
-    transition: all 0.5s;
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+
     ${({ heroInView }) => heroInView && 'transform: translate(-100%, -50%)'};
-    .toggler {
-      display: none;
-    }
+
     .social-menu--desktop {
       background: none;
       transform: translateX(0);
       margin: 0.2rem;
     }
-    .social-menu__icon-name {
+    .link-icon--text {
       opacity: 0;
-      color: ${({ theme: { secondary } }) => secondary};
-      transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: color 0.5s cubic-bezier(0.77, 0, 0.18, 1),
+        opacity 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+      color: ${({ theme: { secondaryDimmer } }) => secondaryDimmer};
     }
-    .social-menu__icon-wrapper:hover .social-menu__icon-name {
+
+    .link-wrapper:hover svg {
+      & * {
+        color: ${({ theme: { secondaryDimmer } }) => secondaryDimmer};
+      }
+    }
+
+    .link-wrapper:hover .link-icon--text {
       opacity: 1;
-      color: ${({ theme: { secondary } }) => secondary};
     }
-    .social-menu__icon-wrapper svg {
+
+    .link-wrapper svg {
       margin: 0 auto 0;
-
-      transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-    .social-menu__icon-wrapper:hover svg {
-      opacity: 1;
-
-      color: ${({ theme: { secondary } }) => secondary};
+      & * {
+        transition: color 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+      }
     }
   }
 `;
@@ -121,42 +119,40 @@ function SocialFloater() {
               menuOpen ? 'slideOut' : 'slideIn'
             } social-menu--desktop`}
           >
-            <span className='social-menu__icon-wrapper'>
+            <span className='link-wrapper'>
               <Link passHref href='https://github.com/SilasCundiff'>
-                <IconLink className='social-menu--link'>
+                <IconLink className='link-icon'>
                   <FiGithub />
-                  <span className='social-menu__icon-name'>GitHub</span>
+                  <span className='link-icon--text'>GitHub</span>
                 </IconLink>
               </Link>
             </span>
-            <span className='social-menu__icon-wrapper'>
+            <span className='link-wrapper'>
               <Link passHref href='https://www.linkedin.com/in/silascundiff/'>
-                <IconLink className='social-menu--link'>
+                <IconLink className='link-icon'>
                   <RiLinkedinLine />
-                  <span className='social-menu__icon-name'>LinkedIn</span>
+                  <span className='link-icon--text'>LinkedIn</span>
                 </IconLink>
               </Link>
             </span>
-            <span className='social-menu__icon-wrapper'>
+            <span className='link-wrapper'>
               <Link passHref href='/extras/resume.pdf' download>
-                <IconLink className='social-menu--link'>
+                <IconLink className='link-icon'>
                   <FiPaperclip />
-                  <span className='social-menu__icon-name'>Resume</span>
+                  <span className='link-icon--text'>Resume</span>
                 </IconLink>
               </Link>
             </span>
-            <span className='social-menu__icon-wrapper'>
+            <span className='link-wrapper'>
               <Link passHref href='mailto:silvanusdesigns@gmail.com'>
-                <IconLink className='social-menu--link'>
+                <IconLink className='link-icon'>
                   <HiOutlineMail />
-                  <span className='social-menu__icon-name'>Email</span>
+                  <span className='link-icon--text'>Email</span>
                 </IconLink>
               </Link>
             </span>
           </span>
-          <span className='toggler' onClick={handleToggle}>
-            {menuOpen ? <HiChevronLeft /> : <HiChevronRight />}
-          </span>
+          <Toggler handleToggle={handleToggle} menuOpen={menuOpen} />
         </IconContext.Provider>
       </StyledSocialFloater>
     </>

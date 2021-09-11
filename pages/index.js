@@ -4,7 +4,7 @@ import Home from '@/components/sections/home';
 import About from '@/components/sections/about';
 import Projects from '@/components/sections/projects';
 import Contact from '@/components/sections/contact';
-import SocialFloater from '@/components/SocialFloater';
+import SocialFloater from '@/components/reusables/SocialFloater/SocialFloater';
 import NavBar from '@/components/Navs/NavBar';
 
 export default function MainPage({ dayMode, dayModeToggler }) {

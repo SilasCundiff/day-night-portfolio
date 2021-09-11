@@ -6,17 +6,13 @@ import animationData from './hero_assets/daycycle.json';
 
 const StyledHeroDaycycle = styled(Lottie)`
   height: 100%;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   top: 0;
   transform: scale(400%);
   z-index: -1;
   overflow: hidden;
-  #Moon,
-  #Sun {
-    /* transform: ${({ offsety }) => `translateY(${offsety * 0.3}px)`}; */
-    /* transition: transform 0s; */
-  }
+
   @media only screen and (min-width: 600px) {
     transform: scale(300%);
   }
@@ -65,6 +61,7 @@ function HeroDaycycle() {
       loop={false}
       segments={currentSegments}
       onComplete={resumeAnimation}
+      speed={2}
     />
   );
 }
