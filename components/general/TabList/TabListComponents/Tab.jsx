@@ -6,8 +6,7 @@ const StyledTab = styled.div`
   color: ${({ active, theme: { primary, secondary } }) =>
     active ? secondary : primary};
   cursor: pointer;
-  padding: 0.6rem 1.2rem;
-
+  padding: 0.6rem 1.2rem 1.2rem;
   border-radius: 5px 5px 0 0;
   font-size: clamp(1.25rem, 2vw, 2rem);
   width: fit-content;
