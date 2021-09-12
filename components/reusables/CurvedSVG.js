@@ -4,11 +4,11 @@ import styled from 'styled-components';
 const StyledCurvedSVG = styled.svg`
   position: absolute;
   z-index: -1;
-  right: 0;
+  inset: 0;
   width: 1920px;
   height: 1110px;
   & * {
-    transition: fill 3s;
+    transition: fill 1s;
   }
   ${({ bottom }) => (bottom ? 'bottom: 0;  ' : 'top: 0; ')};
   .a {

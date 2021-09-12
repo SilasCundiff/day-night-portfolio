@@ -22,8 +22,8 @@ export default function MainPage({ dayMode, dayModeToggler }) {
       <SocialFloater />
       <Home dayModeToggler={dayModeToggler} dayMode={dayMode} />
       <About />
-      <Projects />
-      <Contact />
+      {/* <Projects /> */}
+      {/* <Contact /> */}
       <ThemeToggler dayModeToggler={dayModeToggler} dayMode={dayMode} />
     </div>
   );

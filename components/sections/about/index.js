@@ -6,98 +6,113 @@ import { Parallax } from 'react-scroll-parallax';
 import { isBrowser } from 'react-device-detect';
 const StyledAbout = styled.div`
   position: relative;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
-  padding: 1rem;
 
-  h2 {
-    max-width: 400px;
+  .header {
+    font-size: clamp(3rem, 5vw, 10rem);
+    padding: 1.25rem;
+    margin-top: 15vw;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .section {
+    flex: 1 1 100%;
+    padding: 1.25em;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 12em;
+    &--header {
+      font-size: clamp(2rem, 2vw, 3rem);
+      margin-bottom: 0.8em;
+    }
+    &--paragraph {
+      line-height: 1.25em;
+      margin-bottom: 1.25em;
+    }
   }
 
-  h3 {
-    font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1920 - 300)));
-    margin-bottom: 1rem;
+  .introduction {
+    margin-bottom: 10em;
   }
-
-  .about__header {
-    margin-top: 45vh;
-    margin-bottom: 10vh;
-    width: 80%;
-  }
-  .about__excerpt {
-    max-width: 90vw;
-    padding: 1%;
-    font-size: calc(20px + (20 - 16) * ((100vw - 300px) / (1920 - 300)));
-  }
-  .about__excerpt__content {
-    line-height: 1.65rem;
-    margin-bottom: 1.65rem;
-  }
-  .about__excerpt--introduction {
-    margin-bottom: 45vh;
-  }
-  .about__excerpt--flavor {
-    margin-bottom: 15vh;
-  }
-  .about__excerpt--introduction,
-  .about__excerpt--introduction .about__excerpt__header {
+  .introduction,
+  .introduction .section--header {
     color: ${({ theme: { primary } }) => primary};
   }
-  .about__header.nightModeStyle {
+  .header.nightModeStyle {
     background: ${({ theme: { gradient } }) => gradient};
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
-  .nightModeStyle .about__excerpt--introduction .about__excerpt__header {
+  .nightModeStyle .introduction .section--header {
     color: ${({ theme: { secondary } }) => secondary};
   }
-  .nightModeStyle .about__excerpt--introduction {
+  .nightModeStyle .introduction {
     color: ${({ theme: { text } }) => text};
   }
   @media only screen and (min-width: 600px) {
-    .about__header {
-      margin-top: 35vh;
+    .header {
+      margin-top: 3vw;
     }
   }
   @media only screen and (min-width: 1280px) {
-    .about__header {
-      margin-inline: auto;
+    .header {
+      margin-top: 45vw;
+      background: ${({ theme: { gradient } }) => gradient};
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: ${({ theme: { secondary } }) => secondary};
+      color: transparent;
+      margin-bottom: 1em;
     }
-    h2 {
-      max-width: 780px;
-    }
-
-    .about__container {
+    .wrapper {
       display: flex;
-      .about__excerpt {
-        flex: 1 1 100%;
-        margin-top: 0;
-        padding: 3%;
-      }
-      .about__excerpt--introduction,
-      .about__excerpt--flavor {
-        margin-bottom: 15vh;
+      flex-direction: row;
+      .section--paragraph {
+        max-width: 40ch;
       }
     }
-  }
-  @media only screen and (min-width: 1280px) {
-    .about__header {
-      margin-top: 28vh;
+    .section {
+      flex: 1 1 100%;
+      padding: 1.25em;
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      margin-bottom: 1em;
+      &--header {
+        font-size: clamp(2rem, 2vw, 3rem);
+        margin-bottom: 0.8em;
+      }
+      &--paragraph {
+        line-height: 1.25em;
+        margin-bottom: 1.25em;
+        color: ${({ theme: { text } }) => text};
+      }
+    }
+    .philosophy {
+      margin-left: 3em;
+      .section--header {
+        color: ${({ theme: { secondary } }) => secondary};
+      }
+      background-color: ${({ theme: { primary } }) => `${primary}99`};
+      border-radius: 5px;
+    }
+    .introduction .section--header {
+      color: ${({ theme: { secondary } }) => secondary};
     }
   }
+  /* 
+  
   @media only screen and (min-width: 1920px) {
     h2 {
       max-width: 600px;
     }
-    .about__container {
+    .wrapper {
       justify-content: space-between;
-      .about__excerpt {
+      .section {
         padding: 2% 5%;
       }
     }
-    .about__header {
+    .header {
       margin: 43vh 0 5vh;
       padding: 0 5%;
       background: ${({ theme: { gradient } }) => gradient};
@@ -105,40 +120,40 @@ const StyledAbout = styled.div`
       color: transparent;
       -webkit-background-clip: text;
     }
-    .about__excerpt {
+    .section {
       padding: 0 5%;
       margin-top: 15vh;
     }
-    .about__excerpt--introduction,
-    .about__excerpt--introduction .about__excerpt__header {
+    .introduction,
+    .introduction .section--header {
       color: ${({ theme: { secondary } }) => secondary};
       & p {
         color: ${({ theme: { text } }) => text};
       }
     }
-    .about__excerpt .about__excerpt__header--flavor {
+    .section .section--header--flavor {
       color: ${({ theme: { primary } }) => primary};
     }
 
-    .about__excerpt--flavor .about__excerpt__content {
+    .philosophy .section--paragraph {
       color: ${({ theme: { primary } }) => primary};
     }
-    .about__excerpt--skills {
+    .section--skills {
       margin-bottom: 50vh;
     }
-    .nightModeStyle .about__excerpt .about__excerpt__header--flavor {
+    .nightModeStyle .section .section--header--flavor {
       color: ${({ theme: { secondary } }) => secondary};
     }
 
-    .nightModeStyle .about__excerpt--flavor .about__excerpt__content {
+    .nightModeStyle .philosophy .section--paragraph {
       color: ${({ theme: { text } }) => text};
     }
   }
   @media only screen and (min-width: 1950px) {
-    .about__header {
+    .header {
       margin: 50vh 0 5vh;
     }
-  }
+  } */
   .dreams--outer__container {
     position: absolute;
     top: 25%;
@@ -206,7 +221,7 @@ const StyledAbout = styled.div`
     height: 100%;
   }
 `;
-console.log('isBrowser :>> ', isBrowser);
+
 let dreamsY = ['0px', '200px'];
 let dreamsX = ['100%', '-105%'];
 let intoDesignsX = ['-105%', '100%'];
@@ -234,7 +249,6 @@ function About() {
   return (
     <StyledAbout id='about'>
       <CurvedSVG />
-
       <div className='dreams--outer__container'>
         <div className='dreams__container'>
           <Parallax y={dreamsY}>
@@ -260,62 +274,64 @@ function About() {
         </div>
       </div>
       <Container>
-        <h2 className={`about__header ${!dayMode ? 'nightModeStyle' : ''}`}>
-          A little about me.
+        <h2 className={`header ${!dayMode ? 'nightModeStyle' : ''}`}>
+          A little <br /> about me.
         </h2>
-        <div className={`about__container ${!dayMode ? 'nightModeStyle' : ''}`}>
-          <section className='about__excerpt about__excerpt--introduction'>
-            <h3 className='about__excerpt__header'>Hey, I&apos;m Silas</h3>
-            <p className='about__excerpt__content'>
-              I love to design and develop websites that have unique and
-              interesting concepts.
-            </p>
-            <p className='about__excerpt__content'>
-              Whether it’s conforming to convention, or breaking the mould,
-              Turning dreams into real designs is what I love to do.
-            </p>
+        <div className={`wrapper ${!dayMode ? 'nightModeStyle' : ''}`}>
+          <section className='section introduction'>
+            <h3 className='section--header'>Hey, I&apos;m Silas</h3>
+            <div className='section--content'>
+              <p className='section--paragraph'>
+                I love to design and develop websites that have unique and
+                interesting concepts.
+              </p>
+              <p className='section--paragraph'>
+                Whether it’s conforming to convention, or breaking the mould,
+                Turning dreams into real designs is what I love to do.
+              </p>
+            </div>
           </section>
-          <section className='about__excerpt about__excerpt--flavor'>
-            <h3 className='about__excerpt__header about__excerpt__header--flavor'>
+          <section className='section philosophy'>
+            <h3 className='section--header section--header--philosophy'>
               My code philosophy
             </h3>
-            <p className='about__excerpt__content'>
-              While I have learned the basics of several coding languages, I
-              believe mastery of one is greater than noviceship in many.{' '}
-            </p>
-            <p className='about__excerpt__content'>
-              By focusing on JavaScript, React, and CSS, I have learned a lot
-              about advanced concepts.
-            </p>
-            <p className='about__excerpt__content'>
-              And Concepts are transferable.
-            </p>
+            <div className='section--content'>
+              <p className='section--paragraph'>
+                While I have learned the basics of several coding languages, I
+                believe mastery of one is greater than noviceship in many.{' '}
+              </p>
+              <p className='section--paragraph'>
+                By focusing on JavaScript, React, and CSS, I have learned a lot
+                about advanced concepts.
+              </p>
+            </div>
           </section>
         </div>
-        <section className='about__excerpt about__excerpt--skills'>
-          <h3 className='about__excerpt__header'>
-            What I do, and how I do it.
-          </h3>
-          <p className='about__excerpt__content'>
-            I’m a full-stack developer and designer. From initial project idea
-            and UX/UI design, to back-end implementation and problem solving, I
-            want to be involved.
-          </p>
-          <p className='about__excerpt__content'>
-            React has been my primary focus for over a year now, and I have
-            worked on projects involving Redux, Mongo, Express, and more.
-          </p>
-          <p className='about__excerpt__content'>
-            I have over two years of experience writing CSS, and I primarily
-            work with SASS and Styled-components. I’m no stranger to frameworks
-            such as Tailwind, Bulma, and Bootstrap to name a few. For animation,
-            I use Framer-Motion and Lottie.
-          </p>
-          <p className='about__excerpt__content'>
-            My designs are usually created in Figma, and a lot of the assets I
-            use are created by myself in Adobe suite products such as
-            Illustrator, Photoshop, or After Effects.
-          </p>
+        <section className='section section--skills'>
+          <h3 className='section--header'>What I do, and how I do it.</h3>
+          <div className='section--content'>
+            <p className='section--paragraph'>
+              I’m a full-stack developer and designer. From initial project idea
+              and UX/UI design, to back-end implementation and problem solving,
+              I want to be involved.
+            </p>
+            <p className='section--paragraph'>
+              React has been my primary focus for over a year now, and I have
+              worked on projects involving Redux, MongoDB/Mongoose, Express, and
+              more.
+            </p>
+            <p className='section--paragraph'>
+              I have over two years of experience writing CSS, and I primarily
+              work with SASS and Styled-components. I’m no stranger to
+              frameworks such as Tailwind, Bulma, and Bootstrap to name a few.
+              For animation, I use Framer-Motion and Lottie.
+            </p>
+            <p className='section--paragraph'>
+              My designs are usually created in Figma, and a lot of the assets I
+              use are created by myself in Adobe suite products such as
+              Illustrator, Photoshop, or After Effects.
+            </p>
+          </div>
           <div className='about__except--skills__icons'></div>
         </section>
       </Container>
