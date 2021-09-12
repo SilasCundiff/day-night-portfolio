@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from '@/components/reusables/Buttons/Button';
+import Button from '@/components/general/Buttons/Button';
 const StyledForm = styled.form`
   width: 300px;
   margin-inline: auto;

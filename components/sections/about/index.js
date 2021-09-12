@@ -1,9 +1,12 @@
 import styled from 'styled-components';
-import CurvedSVG from '@/components/reusables/CurvedSVG';
-import Container from '@/components/reusables/Container';
+import CurvedSVG from '@/components/general/CurvedSVG';
+import Container from '@/components/general/Container';
 import { useDayModeContext } from '@/contexts/DayModeContext';
+import { useModalContext } from '@/contexts/ModalContext';
 import { Parallax } from 'react-scroll-parallax';
 import { isBrowser } from 'react-device-detect';
+import Modal from '@/components/general/Modals/Modal';
+import TabList from '@/components/general/TabList/TabList';
 const StyledAbout = styled.div`
   position: relative;
   overflow: hidden;
@@ -51,6 +54,12 @@ const StyledAbout = styled.div`
   .nightModeStyle .introduction {
     color: ${({ theme: { text } }) => text};
   }
+  .skills-list--link {
+    color: ${({ theme: { secondary } }) => secondary};
+    cursor: pointer;
+    margin-top: 2em;
+  }
+
   @media only screen and (min-width: 600px) {
     .header {
       margin-top: 3vw;
@@ -228,8 +237,11 @@ let intoDesignsX = ['-105%', '100%'];
 let designsX = ['-205%', '100%'];
 let designsY = ['0px', '200px'];
 let intoRealityX = ['100%', '-255%'];
+
 function About() {
   const { dayMode } = useDayModeContext();
+  const { modalToggler, modalOpen } = useModalContext();
+
   if (!isBrowser) {
     dreamsY = ['0px', '200px'];
     dreamsX = ['100%', '-105%'];
@@ -332,7 +344,125 @@ function About() {
               Illustrator, Photoshop, or After Effects.
             </p>
           </div>
-          <div className='about__except--skills__icons'></div>
+          <div className='skills-list--link' onClick={modalToggler}>
+            Click here for a full list of skills.
+          </div>
+          {modalOpen && (
+            <Modal>
+              <TabList>
+                <TabList.TabsContainer>
+                  <TabList.Tab id='0'>Design</TabList.Tab>
+                  <TabList.Tab id='1'>Development</TabList.Tab>
+                  <TabList.Tab id='2'>Extras</TabList.Tab>
+                </TabList.TabsContainer>
+                <TabList.PanelsContainer>
+                  <TabList.Panel active='0'>
+                    <h3>Design</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Voluptate nihil laborum, quod nam praesentium nobis, quis
+                      veritatis architecto voluptas ipsa alias quaerat qui ab
+                      blanditiis quia magni ex, iste quas! Excepturi distinctio
+                      illum consectetur dolore cumque ducimus doloribus! Tenetur
+                      cumque adipisci itaque ea in est debitis? Consectetur,
+                      corrupti nostrum odit voluptatibus labore nemo? Amet
+                      sapiente magni, earum pariatur recusandae assumenda.
+                      Veniam modi aspernatur rerum non, saepe rem consectetur
+                      sapiente vero, corporis deserunt sunt, quasi incidunt quod
+                      sequi assumenda eligendi tempora. Dignissimos ullam quod,
+                      temporibus tempore consequuntur similique odio commodi
+                      quas. Quos dolorum aliquid quisquam quam hic ipsam rerum
+                      nam inventore esse officia! Vero cumque incidunt eveniet
+                      facilis earum perspiciatis, officiis veniam itaque fugiat
+                      nisi deserunt in nesciunt rem. Optio, eveniet? Hic et
+                      corporis sed nam nostrum, nobis atque ratione similique
+                      nesciunt corrupti delectus amet ut asperiores eos tempora
+                      deserunt maiores quod ipsum ducimus consectetur minima
+                      accusantium incidunt optio consequatur. Rerum?
+                    </p>
+                    <br />
+                    <br />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Voluptate nihil laborum, quod nam praesentium nobis, quis
+                      veritatis architecto voluptas ipsa alias quaerat qui ab
+                      blanditiis quia magni ex, iste quas! Excepturi distinctio
+                      illum consectetur dolore cumque ducimus doloribus! Tenetur
+                      cumque adipisci itaque ea in est debitis? Consectetur,
+                      corrupti nostrum odit voluptatibus labore nemo? Amet
+                      sapiente magni, earum pariatur recusandae assumenda.
+                      Veniam modi aspernatur rerum non, saepe rem consectetur
+                      sapiente vero, corporis deserunt sunt, quasi incidunt quod
+                      sequi assumenda eligendi tempora. Dignissimos ullam quod,
+                      temporibus tempore consequuntur similique odio commodi
+                      quas. Quos dolorum aliquid quisquam quam hic ipsam rerum
+                      nam inventore esse officia! Vero cumque incidunt eveniet
+                      facilis earum perspiciatis, officiis veniam itaque fugiat
+                      nisi deserunt in nesciunt rem. Optio, eveniet? Hic et
+                      corporis sed nam nostrum, nobis atque ratione similique
+                      nesciunt corrupti delectus amet ut asperiores eos tempora
+                      deserunt maiores quod ipsum ducimus consectetur minima
+                      accusantium incidunt optio consequatur. Rerum?
+                    </p>
+                    <br />
+                    <br />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Voluptate nihil laborum, quod nam praesentium nobis, quis
+                      veritatis architecto voluptas ipsa alias quaerat qui ab
+                      blanditiis quia magni ex, iste quas! Excepturi distinctio
+                      illum consectetur dolore cumque ducimus doloribus! Tenetur
+                      cumque adipisci itaque ea in est debitis? Consectetur,
+                      corrupti nostrum odit voluptatibus labore nemo? Amet
+                      sapiente magni, earum pariatur recusandae assumenda.
+                      Veniam modi aspernatur rerum non, saepe rem consectetur
+                      sapiente vero, corporis deserunt sunt, quasi incidunt quod
+                      sequi assumenda eligendi tempora. Dignissimos ullam quod,
+                      temporibus tempore consequuntur similique odio commodi
+                      quas. Quos dolorum aliquid quisquam quam hic ipsam rerum
+                      nam inventore esse officia! Vero cumque incidunt eveniet
+                      facilis earum perspiciatis, officiis veniam itaque fugiat
+                      nisi deserunt in nesciunt rem. Optio, eveniet? Hic et
+                      corporis sed nam nostrum, nobis atque ratione similique
+                      nesciunt corrupti delectus amet ut asperiores eos tempora
+                      deserunt maiores quod ipsum ducimus consectetur minima
+                      accusantium incidunt optio consequatur. Rerum?
+                    </p>
+                    <br />
+                    <br />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Voluptate nihil laborum, quod nam praesentium nobis, quis
+                      veritatis architecto voluptas ipsa alias quaerat qui ab
+                      blanditiis quia magni ex, iste quas! Excepturi distinctio
+                      illum consectetur dolore cumque ducimus doloribus! Tenetur
+                      cumque adipisci itaque ea in est debitis? Consectetur,
+                      corrupti nostrum odit voluptatibus labore nemo? Amet
+                      sapiente magni, earum pariatur recusandae assumenda.
+                      Veniam modi aspernatur rerum non, saepe rem consectetur
+                      sapiente vero, corporis deserunt sunt, quasi incidunt quod
+                      sequi assumenda eligendi tempora. Dignissimos ullam quod,
+                      temporibus tempore consequuntur similique odio commodi
+                      quas. Quos dolorum aliquid quisquam quam hic ipsam rerum
+                      nam inventore esse officia! Vero cumque incidunt eveniet
+                      facilis earum perspiciatis, officiis veniam itaque fugiat
+                      nisi deserunt in nesciunt rem. Optio, eveniet? Hic et
+                      corporis sed nam nostrum, nobis atque ratione similique
+                      nesciunt corrupti delectus amet ut asperiores eos tempora
+                      deserunt maiores quod ipsum ducimus consectetur minima
+                      accusantium incidunt optio consequatur. Rerum?
+                    </p>
+                  </TabList.Panel>
+                  <TabList.Panel active='1'>
+                    <h3>Development</h3>
+                  </TabList.Panel>
+                  <TabList.Panel active='2'>
+                    <h3>Extras</h3>
+                  </TabList.Panel>
+                </TabList.PanelsContainer>
+              </TabList>
+            </Modal>
+          )}
         </section>
       </Container>
     </StyledAbout>

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Display from './Display';
 import Image from 'next/image';
-import Button from '@/components/reusables/Buttons/Button';
-import Container from '@/components/reusables/Container';
+import Button from '@/components/general/Buttons/Button';
+import Container from '@/components/general/Container';
 import Link from 'next/link';
 const StyledProjectOldPortfolio = styled.div`
   .oldPortfolio__container {

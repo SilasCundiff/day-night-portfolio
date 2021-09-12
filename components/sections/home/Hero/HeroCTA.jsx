@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '@/components/reusables/Buttons/Button';
+import Button from '@/components/general/Buttons/Button';
 import Link from 'next/link';
 import { Parallax } from 'react-scroll-parallax';
 

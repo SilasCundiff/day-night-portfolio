@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import CurvedSVG from '@/components/reusables/CurvedSVG';
-import Container from '@/components/reusables/Container';
+import CurvedSVG from '@/components/general/CurvedSVG';
+import Container from '@/components/general/Container';
 
 import Form from './Form';
-import Button from '@/components/reusables/Buttons/Button';
+import Button from '@/components/general/Buttons/Button';
 import Link from 'next/link';
 const StyledContact = styled.div`
   position: relative;
