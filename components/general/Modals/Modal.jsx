@@ -35,7 +35,7 @@ const StyledModal = styled.div`
     width: 95vw;
     overflow-y: auto;
     display: flex;
-    border-radius: 0.5rem;
+    border-radius: 5px;
     background: ${({ theme: { secondary } }) => secondary};
   }
 

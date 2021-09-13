@@ -11,10 +11,9 @@ const StyledTab = styled.div`
   font-size: clamp(1.25rem, 2vw, 2rem);
   width: fit-content;
   white-space: nowrap;
-  transition: color 0.35s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: color 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
   &:hover {
-    color: ${({ active, theme: { text, secondary } }) =>
-      active ? text : text};
+    color: ${({ active, theme: { text } }) => (active ? text : text)};
   }
 `;
 

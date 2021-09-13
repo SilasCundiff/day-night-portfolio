@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Tab,
   Panel,
@@ -9,10 +9,11 @@ import { TabListProvider } from './TabListContext';
 import styled from 'styled-components';
 
 const StyledTabList = styled.div`
-  height: 100%;
-  width: 100%;
+  height: 99%;
+  width: 99%;
   display: flex;
   flex-direction: column;
+  margin: 0.2rem 0.2rem;
   @media only screen and (min-width: 1280px) {
     margin: auto 2rem;
     height: 95%;

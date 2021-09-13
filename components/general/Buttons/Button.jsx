@@ -14,8 +14,8 @@ const StyledButton = styled.button`
   cursor: pointer;
   text-align: center;
   margin: 0 1em;
-  transition: color 0.5s cubic-bezier(0.77, 0, 0.18, 1),
-    background-color 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: color 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    background-color 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   & a {
     text-decoration: none;
     color: inherit;
@@ -32,11 +32,11 @@ const StyledButton = styled.button`
     width: 0;
     height: 100%;
     background-color: ${({ theme: { primary } }) => primary};
-    transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+    transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
   &:hover {
     color: ${({ theme: { secondary } }) => secondary};
-    transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+    transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
     border: ${({ ghost, theme: { primary } }) =>
       ghost && `${primary} solid 3px`};
   }
