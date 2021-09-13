@@ -30,11 +30,41 @@ const StyledProjects = styled.div`
     color: transparent;
     writing-mode: vertical-rl;
     text-orientation: upright;
+
     @media only screen and (min-width: 1280px) {
       top: 80vh;
       left: -5vw;
       font-size: 40vw;
       letter-spacing: -40vh;
+    }
+  }
+  .project-btn {
+    border: ${({ theme: { secondary } }) => secondary} solid 3px;
+    color: ${({ theme: { secondary } }) => secondary};
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: ${({ theme: { secondary } }) => secondary};
+      transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    &:hover {
+      color: ${({ theme: { primary } }) => primary};
+      transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+      border: ${({ ghost, theme: { primary } }) =>
+        ghost && `${primary} solid 3px`};
+    }
+    &:hover:after {
+      width: 100%;
+    }
+    & a {
+      color: ${({ theme: { secondary } }) => secondary};
+    }
+    &:hover a {
+      color: ${({ theme: { primary } }) => primary};
     }
   }
 `;

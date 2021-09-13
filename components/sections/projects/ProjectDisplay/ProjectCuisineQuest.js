@@ -50,7 +50,7 @@ function ProjectCuisineQuest() {
               <Button>
                 <Link href='https://cuisinequest.app/'>Live Demo</Link>
               </Button>
-              <Button ghost>
+              <Button ghost className='project-btn'>
                 <Link href='https://github.com/SilasCundiff/cuisinequest/tree/V2'>
                   View on github
                 </Link>

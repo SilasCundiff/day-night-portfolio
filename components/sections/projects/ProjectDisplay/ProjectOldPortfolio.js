@@ -49,7 +49,7 @@ function ProjectOldPortfolio() {
               <Button>
                 <Link href='https://silvanusdesign.com/'>Live Demo</Link>
               </Button>
-              <Button ghost>
+              <Button ghost className='project-btn'>
                 <Link href='https://github.com/SilasCundiff/Silvanus-Designs/tree/refactor'>
                   View on github
                 </Link>

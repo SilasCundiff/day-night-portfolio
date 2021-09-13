@@ -44,6 +44,7 @@ const StyledButton = styled.button`
   &:hover:after {
     width: 100%;
   }
+
   ${({ ghost, theme: { primary } }) =>
     ghost &&
     `
