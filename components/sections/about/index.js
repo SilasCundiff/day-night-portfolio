@@ -23,6 +23,9 @@ const StyledAbout = styled.div`
     display: flex;
     flex-direction: column;
   }
+  .about--container {
+    margin-bottom: 30vh;
+  }
   .section {
     flex: 1 1 100%;
     padding: 1.25em;
@@ -116,60 +119,6 @@ const StyledAbout = styled.div`
       color: ${({ theme: { secondary } }) => secondary};
     }
   }
-  /* 
-  
-  @media only screen and (min-width: 1920px) {
-    h2 {
-      max-width: 600px;
-    }
-    .wrapper {
-      justify-content: space-between;
-      .section {
-        padding: 2% 5%;
-      }
-    }
-    .header {
-      margin: 43vh 0 5vh;
-      padding: 0 5%;
-      background: ${({ theme: { gradient } }) => gradient};
-      background-clip: text;
-      color: transparent;
-      -webkit-background-clip: text;
-    }
-    .section {
-      padding: 0 5%;
-      margin-top: 15vh;
-    }
-    .introduction,
-    .introduction .section--header {
-      color: ${({ theme: { secondary } }) => secondary};
-      & p {
-        color: ${({ theme: { text } }) => text};
-      }
-    }
-    .section .section--header--flavor {
-      color: ${({ theme: { primary } }) => primary};
-    }
-
-    .philosophy .section--paragraph {
-      color: ${({ theme: { primary } }) => primary};
-    }
-    .section--skills {
-      margin-bottom: 50vh;
-    }
-    .nightModeStyle .section .section--header--flavor {
-      color: ${({ theme: { secondary } }) => secondary};
-    }
-
-    .nightModeStyle .philosophy .section--paragraph {
-      color: ${({ theme: { text } }) => text};
-    }
-  }
-  @media only screen and (min-width: 1950px) {
-    .header {
-      margin: 50vh 0 5vh;
-    }
-  } */
   .dreams--outer__container {
     position: absolute;
     top: 25%;
@@ -292,7 +241,7 @@ function About() {
           </Parallax>
         </div>
       </div>
-      <Container>
+      <Container className='about--container'>
         <h2 className={`header ${!dayMode ? 'nightModeStyle' : ''}`}>
           A little <br /> about me.
         </h2>

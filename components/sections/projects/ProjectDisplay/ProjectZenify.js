@@ -13,7 +13,7 @@ const StyledProjectZenify = styled.div`
 
 function ProjectZenify() {
   return (
-    <StyledProjectZenify>
+    <StyledProjectZenify className='project'>
       <Container className='zenify__container'>
         <Display>
           <Display.Header>

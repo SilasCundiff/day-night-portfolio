@@ -12,7 +12,7 @@ const StyledProjectOldPortfolio = styled.div`
 
 function ProjectOldPortfolio() {
   return (
-    <StyledProjectOldPortfolio>
+    <StyledProjectOldPortfolio className='project'>
       <Container className='oldPortfolio__container'>
         <Display>
           <Display.Header>

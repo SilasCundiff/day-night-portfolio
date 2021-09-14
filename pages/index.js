@@ -23,7 +23,7 @@ export default function MainPage({ dayMode, dayModeToggler }) {
       <Home dayModeToggler={dayModeToggler} dayMode={dayMode} />
       <About />
       <Projects />
-      {/* <Contact /> */}
+      <Contact />
       <ThemeToggler dayModeToggler={dayModeToggler} dayMode={dayMode} />
     </div>
   );

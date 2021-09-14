@@ -13,7 +13,7 @@ const StyledProjectCuisineQuest = styled.div`
 
 function ProjectCuisineQuest() {
   return (
-    <StyledProjectCuisineQuest>
+    <StyledProjectCuisineQuest className='project'>
       <Container className='cuisineQuest__container'>
         <Display>
           <Display.Header>
