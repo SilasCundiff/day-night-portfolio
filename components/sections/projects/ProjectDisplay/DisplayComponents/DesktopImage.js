@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const StyledDesktopImage = styled.div`
   overflow-x: auto;
   margin-bottom: 0.5rem;
+
   & .image-wrapper {
     width: 200vw;
     aspect-ratio: 16 / 9;

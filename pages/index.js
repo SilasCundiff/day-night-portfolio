@@ -1,11 +1,11 @@
-import ThemeToggler from '@/components/ThemeToggler';
+import ThemeToggler from '@/components/general/ThemeToggler';
 import Head from 'next/head';
 import Home from '@/components/sections/home';
 import About from '@/components/sections/about';
 import Projects from '@/components/sections/projects';
 import Contact from '@/components/sections/contact';
-import SocialFloater from '@/components/reusables/SocialFloater/SocialFloater';
-import NavBar from '@/components/Navs/NavBar';
+import SocialFloater from '@/components/general/SocialFloater/SocialFloater';
+import NavBar from '@/components/general/Navs/NavBar';
 
 export default function MainPage({ dayMode, dayModeToggler }) {
   return (

@@ -56,7 +56,11 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
   - [ ] About Me
     - [x] Make Responsive
     - [x] About me background parallax
-    - [ ] About me Skills Icons and text highlights
+    - [x] ~~About me Skills Icons and text highlights~~
+    - [ ] Add Skills modal
+      - [x] Add Tabs for skill categories
+      - [x] Add Accordion for skills
+      - [ ] Flesh out full list of skills (in skillInfo.js)
     - [x] About me desktop styling
     - [x] Fix About me nightmode color of heading and first paragraph.
   - [ ] Projects

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Display from './Display';
 import Image from 'next/image';
-import Button from '@/components/reusables/Buttons/Button';
-import Container from '@/components/reusables/Container';
+import Button from '@/components/general/Buttons/Button';
+import Container from '@/components/general/Container';
 import Link from 'next/link';
 
 const StyledProjectCuisineQuest = styled.div`
@@ -13,7 +13,7 @@ const StyledProjectCuisineQuest = styled.div`
 
 function ProjectCuisineQuest() {
   return (
-    <StyledProjectCuisineQuest>
+    <StyledProjectCuisineQuest className='project'>
       <Container className='cuisineQuest__container'>
         <Display>
           <Display.Header>
@@ -50,7 +50,7 @@ function ProjectCuisineQuest() {
               <Button>
                 <Link href='https://cuisinequest.app/'>Live Demo</Link>
               </Button>
-              <Button ghost>
+              <Button ghost className='project-btn'>
                 <Link href='https://github.com/SilasCundiff/cuisinequest/tree/V2'>
                   View on github
                 </Link>

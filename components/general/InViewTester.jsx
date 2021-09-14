@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+// ? Used to test if the element is in view using react-intersection-observer
 const StyledInViewTester = styled.div`
   position: fixed;
   bottom: 5%;

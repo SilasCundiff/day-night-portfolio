@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Display from './Display';
 import Image from 'next/image';
-import Button from '@/components/reusables/Buttons/Button';
-import Container from '@/components/reusables/Container';
+import Button from '@/components/general/Buttons/Button';
+import Container from '@/components/general/Container';
 import Link from 'next/link';
 const StyledProjectOldPortfolio = styled.div`
   .oldPortfolio__container {
@@ -12,7 +12,7 @@ const StyledProjectOldPortfolio = styled.div`
 
 function ProjectOldPortfolio() {
   return (
-    <StyledProjectOldPortfolio>
+    <StyledProjectOldPortfolio className='project'>
       <Container className='oldPortfolio__container'>
         <Display>
           <Display.Header>
@@ -49,7 +49,7 @@ function ProjectOldPortfolio() {
               <Button>
                 <Link href='https://silvanusdesign.com/'>Live Demo</Link>
               </Button>
-              <Button ghost>
+              <Button ghost className='project-btn'>
                 <Link href='https://github.com/SilasCundiff/Silvanus-Designs/tree/refactor'>
                   View on github
                 </Link>

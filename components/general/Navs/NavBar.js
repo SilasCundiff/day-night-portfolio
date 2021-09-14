@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from './Nav';
 import Link from 'next/link';
-import LogoSVG from '../reusables/LogoSVG';
+import LogoSVG from '../LogoSVG';
 
 const NavBar = () => {
   return (
