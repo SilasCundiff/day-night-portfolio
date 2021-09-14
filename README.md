@@ -63,7 +63,7 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
       - [ ] Flesh out full list of skills (in skillInfo.js)
     - [x] About me desktop styling
     - [x] Fix About me nightmode color of heading and first paragraph.
-  - [ ] Projects
+  - [x] Projects
     - [x] Make Responsive
     - [x] Define better projects divider text. 
     - [x] Add background
@@ -71,6 +71,7 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
     - [x] Make Responsive
     - [x] Add backend for contact form.
     - [x] Add Success page
+  - [ ] Redesign contact page
   - [ ] Misc
     - [ ] Reformat Social Floater to be reusable
 

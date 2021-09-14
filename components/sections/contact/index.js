@@ -98,20 +98,19 @@ function Contact() {
       <Container className='contact--container'>
         <Container className='github--container'>
           <h2 className='github--heading'>
-            For more projects, <br /> check out my github
+            View my resume for my work experience!
           </h2>
           <div className='button-container'>
             <Button className='contact-btn'>
-              <Link href='https://github.com/SilasCundiff'>Github</Link>
-            </Button>
-            <Button className='contact-btn'>
               <Link href='/extras/resume.pdf' download>
-                My Resume
+                Download Resume
               </Link>
             </Button>
           </div>
         </Container>
+
         <Form />
+
         <footer className='footer'>Made by Silas Cundiff with NextJS</footer>
       </Container>
       <div className='flipper'>

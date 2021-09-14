@@ -6,7 +6,6 @@ import { ProjectZenify } from './ProjectDisplay/ProjectZenify';
 import { ProjectOldPortfolio } from './ProjectDisplay/ProjectOldPortfolio';
 import Link from 'next/link';
 const StyledProjects = styled.div`
-  margin-bottom: 25vh;
   position: relative;
   overflow: clip;
 
@@ -80,7 +79,7 @@ const StyledProjects = styled.div`
     overflow: hidden;
     padding-bottom: 20vh;
     .projects__background {
-      width: 40%;
+      width: 30%;
       opacity: 0.8;
       font-size: 50vh;
       letter-spacing: -25vh;
