@@ -67,7 +67,7 @@ Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Ef
     - [x] Make Responsive
     - [x] Define better projects divider text. 
     - [x] Add background
-  - [ ] Contact
+  - [x] Contact
     - [x] Make Responsive
     - [x] Add backend for contact form.
     - [x] Add Success page

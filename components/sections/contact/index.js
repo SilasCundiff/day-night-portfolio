@@ -18,7 +18,7 @@ const StyledContact = styled.div`
   }
 
   .github--container {
-    width: 80%;
+    width: 90%;
     margin: 10vh auto 15vh;
     .button-container {
       display: flex;
@@ -47,11 +47,7 @@ const StyledContact = styled.div`
     height: 100%;
     z-index: -1;
   }
-  .footer {
-    margin: auto auto 4rem;
-    width: 100%;
-    text-align: center;
-  }
+
   @media only screen and (min-width: 1280px) {
     .github--container {
       .button-container {
@@ -70,24 +66,25 @@ const StyledContact = styled.div`
     }
   }
   @media only screen and (min-width: 1920px) {
-    height: 130vh;
+    height: fit-content;
     display: flex;
+
     .github--container {
       max-width: 45%;
       margin: 0;
       height: 35%;
+      margin-top: 2rem;
     }
     .contact--container {
+      width: 70vw;
       flex-direction: row-reverse;
       justify-content: space-between;
-      align-items: center;
+      margin-top: 35vh;
     }
-    .footer {
-      width: 100%;
-      text-align: center;
-      position: absolute;
-      bottom: 0;
-      left: 0;
+
+    .flipper {
+      height: 120vh;
+      width: 99.1vw;
     }
   }
 `;
@@ -110,8 +107,6 @@ function Contact() {
         </Container>
 
         <Form />
-
-        <footer className='footer'>Made by Silas Cundiff with NextJS</footer>
       </Container>
       <div className='flipper'>
         <CurvedSVG className='contact--shapeSVG' />

@@ -77,7 +77,7 @@ const StyledProjects = styled.div`
   }
   @media only screen and (min-width: 1280px) {
     overflow: hidden;
-    padding-bottom: 20vh;
+    padding-bottom: 5vh;
     .projects__background {
       width: 30%;
       opacity: 0.8;
@@ -107,7 +107,7 @@ function Projects() {
         </h2>
         <h3 className='portfolio-github--link'>
           <Link href='https://github.com/SilasCundiff/silascundiff'>
-            Click here for it&apos;s GitHub Page!
+            Click here for the GitHub Repo!
           </Link>
         </h3>
       </Divider>
