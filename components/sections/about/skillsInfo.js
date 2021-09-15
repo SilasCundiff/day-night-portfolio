@@ -19,6 +19,20 @@ export const design = [
       'I use it for image optimization, asset creation, and composition.',
     certificates: 'College Certificate, Udemy Certificate',
   },
+  {
+    id: 4,
+    header: 'After Effects: .5 years',
+    content:
+      'I mainly use After Effects for lottie animations. It was pretty easy to pick up because of the Adobe Animate courses I took in college.',
+    certificates: 'Self Taught',
+  },
+  {
+    id: 5,
+    header: 'Animate: .5 years',
+    content:
+      'I used Animate for several college courses, but I much prefer After Effects after trying it out.',
+    certificates: 'College Certificate',
+  },
 ];
 
 export const development = [
@@ -32,11 +46,71 @@ export const development = [
   },
   {
     id: 2,
-    header: 'JavaScript: 2+ years',
+    header: 'JavaScript: 2.5+ years',
     content:
       'My experience with JavaScript includes: async/await and Promises, objects array methods, destructuring, spread, functions default params, ternary operations, arrow functions and their impact on ".this", classes, ".this" keyword, in-built fetch and axios library, AudioContext Api, canvas manipulation, and much more.',
     certificates:
       'College Certificate, Multiple Udemy Certificates, Hundreds of hours of Self Taught/Research',
+  },
+  {
+    id: 3,
+    header: 'React: 2+ years',
+    content:
+      'I have been almost exclusively focused on React development for over a year now. I wanted to dive deep into a single library so that I could become familiar with more advanced patterns, instead of relearning the basics of multiple technologies. I have used class based React, where I gained a lot of understanding of ".this", constructors, inheritance, and lifecycles. I mainly work with functional components w/ hooks. I\'m familiar with the context api, and creating compound components.',
+    certificates:
+      'College Certificate, Multiple Udemy Certificates, Hundreds of hours of Self Taught/Research',
+  },
+  {
+    id: 4,
+    header: 'Redux: 1.5+ years',
+    content:
+      "Most of the projects I have used Redux on didn't need Redux, and could have been accomplished with a context provider, but I used Redux regardless to learn. I'm familiar with the core of action dispatch, reducers, and the store. I know how to use middleware to take care of calculations and asynchronous code before it is returned by the reducer.",
+    certificates:
+      'Multiple Udemy Certificates, Hundreds of hours of Self Taught/Research',
+  },
+  {
+    id: 5,
+    header: 'SCSS/Style-components: 2+ years',
+    content:
+      'I mainly write CSS in SASS or style-components now. I have used css-in-js on occasion, but I dislike the syntax.',
+    certificates:
+      'Multiple Udemy Certificates, Hundreds of hours of Self Taught/Research',
+  },
+  {
+    id: 6,
+    header: 'framer-motion/lottie: 1+ years',
+    content:
+      "I use framer when I feel like CSS transitions and keyframes can't get a job done, or when I need a more dynamic animation. If I need animations with a lot finer controls, or that are a lot more complex, I have started using lottie animations that I create in After Effects.",
+    certificates: 'Self Taught',
+  },
+  {
+    id: 7,
+    header: 'Express: 1.5+ years',
+    content:
+      "I'm familiar with client/server architecture and CRUD operations. I have worked on projects involving Express and mongoose to communicate between the client and a backend database. These projects also included Redux and React.",
+    certificates:
+      'Multiple Udemy Certificates, Hundreds of hours of Self Taught/Research',
+  },
+  {
+    id: 8,
+    header: 'TypeScript: .5 years',
+    content:
+      "I've begun trying to work TypeScript into my projects, I'm familiar with the basics, but still learning.",
+    certificates: 'Udemy Certificate, Self Taught',
+  },
+  {
+    id: 9,
+    header: 'NextJS. 1 month.',
+    content:
+      "I have only recently begun learning Next. I wanted to learn a SSR framework that I could use to make this very site, to improve it's initial load time, and lazy load the project images.",
+    certificates: 'Self Taught',
+  },
+  {
+    id: 10,
+    header: 'Misc React/JS',
+    content:
+      'Axios, Redux-Thunk, Formik, Font-Awesome Components, Jest, Bulma, Bootstrap, Material-UI, Tailwind, Storybook, Many external APIs, and dozens of smaller one off libraries.',
+    certificates: 'Udemy Certificates, Self Taught',
   },
 ];
 
@@ -60,6 +134,13 @@ export const extras = [
     header: 'Java',
     content:
       'The first programming language I completed a college certificate in. Experience the same as PHP.',
+    certificates: 'College Certificate',
+  },
+  {
+    id: 4,
+    header: 'Dreamweaver',
+    content:
+      "I took a Dreamweaver class in college. I prefer hand coding, so I haven't used it since, but I'm sure I could quickly relearn how to use it.",
     certificates: 'College Certificate',
   },
 ];

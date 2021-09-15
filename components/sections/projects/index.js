@@ -6,7 +6,6 @@ import { ProjectZenify } from './ProjectDisplay/ProjectZenify';
 import { ProjectOldPortfolio } from './ProjectDisplay/ProjectOldPortfolio';
 import Link from 'next/link';
 const StyledProjects = styled.div`
-  margin-bottom: 25vh;
   position: relative;
   overflow: clip;
 
@@ -78,9 +77,9 @@ const StyledProjects = styled.div`
   }
   @media only screen and (min-width: 1280px) {
     overflow: hidden;
-    padding-bottom: 20vh;
+    padding-bottom: 5vh;
     .projects__background {
-      width: 40%;
+      width: 30%;
       opacity: 0.8;
       font-size: 50vh;
       letter-spacing: -25vh;
@@ -108,7 +107,7 @@ function Projects() {
         </h2>
         <h3 className='portfolio-github--link'>
           <Link href='https://github.com/SilasCundiff/silascundiff'>
-            Click here for it&apos;s GitHub Page!
+            Click here for the GitHub Repo!
           </Link>
         </h3>
       </Divider>

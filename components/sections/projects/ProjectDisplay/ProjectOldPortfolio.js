@@ -17,7 +17,7 @@ function ProjectOldPortfolio() {
         <Display>
           <Display.Header>
             <Display.Title>Old Portfolio</Display.Title>
-            <Display.Role>Full-Stack Developer • UI Designer</Display.Role>
+            <Display.Role>Front-end Developer • UI Designer</Display.Role>
           </Display.Header>
           <Display.Images>
             <Display.DesktopImage>
@@ -42,9 +42,7 @@ function ProjectOldPortfolio() {
             </Display.MobileImage>
           </Display.Images>
           <Display.Footer>
-            <Display.Description>
-              My previous portfolio. I wasn&apos;t satisfied with it.
-            </Display.Description>
+            <Display.Description>My previous portfolio.</Display.Description>
             <Display.ButtonContainer>
               <Button>
                 <Link href='https://silvanusdesign.com/'>Live Demo</Link>
