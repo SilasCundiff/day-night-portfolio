@@ -1,4 +1,4 @@
-# Silas Cundiff Portfolio Project 3.0
+# SilasCundiff.com
 
 Designed in Figma, Assets created in Figma, Illustrator, Photoshop, and After Effects.
 
