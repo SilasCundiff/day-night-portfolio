@@ -187,60 +187,65 @@ const StyledAbout = styled.div`
   }
 `;
 
-let dreamsY = ['0px', '200px'];
-let dreamsX = ['100%', '-105%'];
-let intoDesignsX = ['-105%', '100%'];
-let designsX = ['-205%', '100%'];
-let designsY = ['0px', '200px'];
-let intoRealityX = ['100%', '-255%'];
+const dreamsY = ['0px', '500px'];
+const dreamsX = ['50%', '10%'];
+const intoDesignsX = ['-55%', '25%'];
+const designsX = ['-205%', '10%'];
+const designsY = ['0px', '600px'];
+const intoRealityX = ['100%', '25%'];
 
 function About() {
   const { dayMode } = useDayModeContext();
   const { modalToggler, modalOpen } = useModalContext();
 
-  if (!isBrowser) {
-    dreamsY = ['0px', '200px'];
-    dreamsX = ['100%', '-105%'];
-    intoDesignsX = ['-105%', '100%'];
-    designsX = ['-205%', '100%'];
-    designsY = ['0px', '200px'];
-    intoRealityX = ['100%', '-255%'];
-  }
-  if (isBrowser) {
-    dreamsY = ['0px', '500px'];
-    dreamsX = ['50%', '10%'];
-    intoDesignsX = ['-55%', '25%'];
-    designsX = ['-205%', '10%'];
-    designsY = ['0px', '600px'];
-    intoRealityX = ['100%', '25%'];
-  }
   return (
     <StyledAbout id='about'>
       <CurvedSVG />
-      <div className='dreams--outer__container'>
-        <div className='dreams__container'>
-          <Parallax y={dreamsY}>
-            <Parallax x={dreamsX}>
+      {isBrowser && (
+        <div>
+          <div className='dreams--outer__container'>
+            <div className='dreams__container'>
+              <Parallax y={dreamsY}>
+                <Parallax x={dreamsX}>
+                  <div className='dreams'>DREAMS</div>
+                </Parallax>
+                <Parallax x={intoDesignsX}>
+                  <div className='intodesigns'>INTO DESIGNS</div>
+                </Parallax>
+              </Parallax>
+            </div>
+          </div>
+          <div className='designs--outer__container '>
+            <div className='designs__container'>
+              <Parallax y={designsY}>
+                <Parallax x={designsX}>
+                  <div className='designs'>DESIGNS</div>
+                </Parallax>
+                <Parallax x={intoRealityX}>
+                  <div className='intoreality'>INTO REALITY</div>
+                </Parallax>
+              </Parallax>
+            </div>
+          </div>
+        </div>
+      )}
+      {!isBrowser && (
+        <div>
+          <div className='dreams--outer__container'>
+            <div className='dreams__container'>
               <div className='dreams'>DREAMS</div>
-            </Parallax>
-            <Parallax x={intoDesignsX}>
+
               <div className='intodesigns'>INTO DESIGNS</div>
-            </Parallax>
-          </Parallax>
-        </div>
-      </div>
-      <div className='designs--outer__container '>
-        <div className='designs__container'>
-          <Parallax y={designsY}>
-            <Parallax x={designsX}>
+            </div>
+          </div>
+          <div className='designs--outer__container '>
+            <div className='designs__container'>
               <div className='designs'>DESIGNS</div>
-            </Parallax>
-            <Parallax x={intoRealityX}>
               <div className='intoreality'>INTO REALITY</div>
-            </Parallax>
-          </Parallax>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
       <Container className='about--container'>
         <h2 className={`header ${!dayMode ? 'nightModeStyle' : ''}`}>
           A little <br /> about me.

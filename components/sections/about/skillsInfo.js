@@ -15,22 +15,21 @@ export const design = [
   {
     id: 3,
     header: 'Photoshop: 1+ years',
-    content:
-      'I use it for image optimization, asset creation, and composition.',
+    content: 'For image optimization, asset creation, and composition.',
     certificates: 'College Certificate, Udemy Certificate',
   },
   {
     id: 4,
-    header: 'After Effects: .5 years',
+    header: 'After Effects: 0.5 years',
     content:
-      'I mainly use After Effects for lottie animations. It was pretty easy to pick up because of the Adobe Animate courses I took in college.',
+      'Used to create lottie animations. It was pretty easy to pick up because of the Adobe Animate courses I took in college.',
     certificates: 'Self Taught',
   },
   {
     id: 5,
-    header: 'Animate: .5 years',
+    header: 'Animate: 0.5 years',
     content:
-      'I used Animate for several college courses, but I much prefer After Effects after trying it out.',
+      'I previously used Animate for several college courses, but I much prefer After Effects after trying it out.',
     certificates: 'College Certificate',
   },
 ];
@@ -72,7 +71,7 @@ export const development = [
     id: 5,
     header: 'SCSS/Style-components: 2+ years',
     content:
-      'I mainly write CSS in SASS or style-components now. I have used css-in-js on occasion, but I dislike the syntax.',
+      'SASS and style-components are the primary way I write CSS for most projects. I have used css-in-js on occasion, but I prefer the syntax of SASS more.',
     certificates:
       'Multiple Udemy Certificates, Hundreds of hours of Self Taught/Research',
   },
@@ -80,7 +79,7 @@ export const development = [
     id: 6,
     header: 'framer-motion/lottie: 1+ years',
     content:
-      "I use framer when I feel like CSS transitions and keyframes can't get a job done, or when I need a more dynamic animation. If I need animations with a lot finer controls, or that are a lot more complex, I have started using lottie animations that I create in After Effects.",
+      "Framer is used when I feel like CSS transitions and keyframes can't get a job done, or when I need a more dynamic animation. If I need animations with a lot finer controls, or that are a lot more complex, I have started using lottie animations that I create in After Effects.",
     certificates: 'Self Taught',
   },
   {
@@ -93,7 +92,7 @@ export const development = [
   },
   {
     id: 8,
-    header: 'TypeScript: .5 years',
+    header: 'TypeScript: 0.5 years',
     content:
       "I've begun trying to work TypeScript into my projects, I'm familiar with the basics, but still learning.",
     certificates: 'Udemy Certificate, Self Taught',
@@ -102,7 +101,7 @@ export const development = [
     id: 9,
     header: 'NextJS. 1 month.',
     content:
-      "I have only recently begun learning Next. I wanted to learn a SSR framework that I could use to make this very site, to improve it's initial load time, and lazy load the project images.",
+      "Next is something I started learning to create this website. I wanted to learn a SSR framework that I could use to improve it's initial load time, and lazy load the project images.",
     certificates: 'Self Taught',
   },
   {
