@@ -9,8 +9,8 @@ import { TabListProvider } from './TabListContext';
 import styled from 'styled-components';
 
 const StyledTabList = styled.div`
-  height: 99%;
-  width: 99%;
+  height: 98%;
+  width: 98%;
   display: flex;
   flex-direction: column;
   margin: 0.2rem 0.2rem;

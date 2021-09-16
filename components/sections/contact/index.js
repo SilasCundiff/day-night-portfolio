@@ -87,6 +87,11 @@ const StyledContact = styled.div`
       width: 99.1vw;
     }
   }
+  @media only screen and (min-width: 2000px) {
+    .contact--container {
+      margin-top: 25vh;
+    }
+  }
 `;
 
 function Contact() {
