@@ -12,6 +12,9 @@ const StyledProjectCuisineQuest = styled.div`
     margin: 0 5vw 0 auto;
   }
   position: relative;
+  a {
+    color: ${({ theme: { text } }) => text};
+  }
 `;
 
 function ProjectCuisineQuest() {
@@ -38,6 +41,16 @@ function ProjectCuisineQuest() {
                 It is also being transferred to Next.js, and I&apos;ll be adding
                 Firebase auth and user data to provide improved search
                 filtering.
+              </p>
+              <p>
+                <a href='https://github.com/SilasCundiff/cuisinequest--next'>
+                  Click here to view the progress on github!
+                </a>
+              </p>
+              <p>
+                <a href='https://www.figma.com/file/3XKkJLAIlIsSjV0vpkz266/CuisineQuestV2?node-id=0%3A1'>
+                  or view the Figma Prototype of the new design!
+                </a>
               </p>
             </SpeechBubble>
 
