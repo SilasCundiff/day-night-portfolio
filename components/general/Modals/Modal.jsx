@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useModalContext } from '@/contexts/ModalContext';
 import { useDayModeContext } from '@/contexts/DayModeContext';

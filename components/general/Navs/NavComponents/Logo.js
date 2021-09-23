@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledLogo = styled.div`
+  position: relative;
   flex: 1 1 10%;
   display: flex;
   justify-content: center;
@@ -9,11 +10,11 @@ const StyledLogo = styled.div`
   background: ${({ theme: { primary } }) => primary};
   color: ${({ theme: { secondary } }) => secondary};
   font-weight: ${({ theme: { bold } }) => bold};
-  font-size: 2rem;
-  transition: color 3s;
+  font-size: clamp(1.25rem, 2vw, 3rem);
+  overflow-y: visible;
+  transition: all 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
   &:hover {
-    color: ${({ theme: { accent } }) => accent};
-    transition: color 0.2s;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   }
   & a {
     display: flex;
@@ -25,10 +26,6 @@ const StyledLogo = styled.div`
   @media only screen and (min-width: 1280px) {
     flex: 1 1 20%;
     background: none;
-    font-size: 2rem;
-  }
-  @media only screen and (min-width: 1920px) {
-    font-size: 3rem;
   }
 `;
 
