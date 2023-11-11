@@ -5,7 +5,7 @@ const StyledListItemContainer = styled.ul`
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  gap: 4rem;
   align-items: center;
   background-color: ${({ theme: { primary } }) => primary};
   flex: 1 1 100%;

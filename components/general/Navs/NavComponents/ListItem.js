@@ -4,6 +4,9 @@ import { useNavContext } from '../NavContext';
 
 const StyledNavItem = styled.li`
   padding: 0.5rem 1rem;
+  &:first-of-type {
+    margin-left: auto;
+  }
 
   color: ${({ theme: { secondary } }) => secondary};
   cursor: pointer;

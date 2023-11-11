@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Button from '@/components/general/Buttons/Button';
 import Container from '@/components/general/Container';
 import Link from 'next/link';
-import SpeechBubble from '@/components/general/SpeechBubble/SpeechBubble';
+// import SpeechBubble from '@/components/general/SpeechBubble/SpeechBubble';
 import { useInView } from 'react-intersection-observer';
 
 const StyledProjectCuisineQuest = styled.div`
@@ -27,33 +27,7 @@ function ProjectCuisineQuest() {
       <Container className='cuisineQuest__container'>
         <Display>
           <Display.Header>
-            <SpeechBubble
-              top={'25%'}
-              left={'25%'}
-              openDelay={2000}
-              closeDelay={10000}
-              parentInView={inView}
-            >
-              <p>
-                CuisineQuest is currently in the process of a complete overhaul.
-              </p>
-              <p>
-                It is also being transferred to Next.js, and I&apos;ll be adding
-                Firebase auth and user data to provide improved search
-                filtering.
-              </p>
-              <p>
-                <a href='https://github.com/SilasCundiff/cuisinequest--next'>
-                  Click here to view the progress on github!
-                </a>
-              </p>
-              <p>
-                <a href='https://www.figma.com/file/3XKkJLAIlIsSjV0vpkz266/CuisineQuestV2?node-id=0%3A1'>
-                  or view the Figma Prototype of the new design!
-                </a>
-              </p>
-            </SpeechBubble>
-
+            
             <Display.Title>CuisineQuest</Display.Title>
             <Display.Role>Full-Stack Developer • UI Designer</Display.Role>
           </Display.Header>
@@ -85,7 +59,7 @@ function ProjectCuisineQuest() {
             </Display.Description>
             <Display.ButtonContainer>
               <Button>
-                <Link href='https://cuisinequest.app/'>Live Demo</Link>
+              Live demo coming soon
               </Button>
               <Button ghost className='project-btn'>
                 <Link href='https://github.com/SilasCundiff/cuisinequest/tree/V2'>

@@ -48,9 +48,7 @@ function ProjectZenify() {
             </Display.Description>
             <Display.ButtonContainer>
               <Button>
-                <Link href='https://zenify-server.herokuapp.com/'>
-                  Live Demo
-                </Link>
+                Live Demo coming soon
               </Button>
               <Button ghost className='project-btn'>
                 <Link href='https://github.com/SilasCundiff/zenify'>

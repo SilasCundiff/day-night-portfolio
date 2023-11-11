@@ -13,6 +13,7 @@ const StyledSocialFloater = styled.div`
   z-index: 10;
   display: flex;
   flex-direction: column-reverse;
+   font-family: 'Poppins', sans-serif;
   .social-menu {
     margin: 0.5rem;
     background: ${({ theme: { primary } }) => primary};

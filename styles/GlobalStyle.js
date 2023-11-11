@@ -3,7 +3,7 @@ import reset from 'styled-reset';
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
-  
+
   html {
     font-family: 'Poppins';
     background: ${({ theme: { primary } }) => primary};

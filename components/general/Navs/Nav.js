@@ -14,6 +14,7 @@ import { NavProvider } from './NavContext';
 
 const StyledNav = styled.nav`
   background: none;
+   font-family: 'Poppins', sans-serif;
 `;
 
 const Nav = ({ children }) => {

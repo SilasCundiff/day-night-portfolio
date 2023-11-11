@@ -6,10 +6,12 @@ import { Parallax } from 'react-scroll-parallax';
 
 const StyledHeroCTA = styled.div`
   text-align: center;
+   font-family: 'Poppins', sans-serif;
   .subtitle {
     font-size: clamp(1rem, 2vw, 3rem);
     font-weight: ${({ theme: { thin } }) => thin};
     margin-block: clamp(0.5rem, 1vw, 2rem) clamp(1.5rem, 2.5vw, 5rem);
+    font-family: 'Poppins', sans-serif;
   }
 `;
 
@@ -17,8 +19,8 @@ function HeroCTA() {
   return (
     <StyledHeroCTA>
       <Parallax y={['-60%', '150%']}>
-        <h1>Silas Cundiff</h1>
-        <h2 className='subtitle'>Designer - Developer - Dreamer</h2>
+        <h1>Hey, I'm Silas!</h1>
+        <h2 className='subtitle'>A Frontend Web Developer & Designer</h2>
         <div>
           <Button>
             <Link href='#projects'>My Work</Link>

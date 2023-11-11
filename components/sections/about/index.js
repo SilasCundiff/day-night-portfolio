@@ -13,6 +13,7 @@ import { design, development, extras } from './skillsInfo';
 const StyledAbout = styled.div`
   position: relative;
   overflow: hidden;
+   font-family: 'Poppins', sans-serif;
 
   .header {
     font-size: clamp(3rem, 5vw, 10rem);
@@ -89,13 +90,13 @@ const StyledAbout = styled.div`
       display: flex;
       flex-direction: row;
       .section--paragraph {
-        max-width: 40ch;
+        // max-width: 40ch;
       }
     }
     .section {
       flex: 1 1 100%;
       padding: 1.25em;
-      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-size: clamp(2rem, 2vw, 1.5rem);
       margin-bottom: 1em;
       &--header {
         font-size: clamp(2rem, 2vw, 3rem);
@@ -252,57 +253,31 @@ function About() {
         </h2>
         <div className={`wrapper ${!dayMode ? 'nightModeStyle' : ''}`}>
           <section className='section introduction'>
-            <h3 className='section--header'>Hey, I&apos;m Silas</h3>
+            {/* <h3 className='section--header'>Hey, I&apos;m Silas</h3> */}
             <div className='section--content'>
               <p className='section--paragraph'>
                 I love to design and develop websites that have unique and
                 interesting concepts.
               </p>
               <p className='section--paragraph'>
-                Whether it’s conforming to convention, or breaking the mould,
-                Turning dreams into real designs is what I love to do.
-              </p>
-            </div>
-          </section>
-          <section className='section philosophy'>
-            <h3 className='section--header section--header--philosophy'>
-              My code philosophy
-            </h3>
-            <div className='section--content'>
-              <p className='section--paragraph'>
-                While I have learned the basics of several coding languages, I
-                believe mastery of one is greater than noviceship in many.{' '}
+                I&apos;m a full-stack developer and designer. I&apos;m
+                passionate about creating projects that are both functional and
+                beautiful.
               </p>
               <p className='section--paragraph'>
-                By focusing on JavaScript, React, and CSS, I have learned a lot
-                about advanced concepts.
+                Previously, I worked for a development studio called Polyglot labs, where I helped develop and maintain dozens of WordPress sites.
               </p>
             </div>
           </section>
         </div>
         <section className='section section--skills'>
-          <h3 className='section--header'>What I do, and how I do it.</h3>
+          <h3 className='section--header'>My most loved tools and tech</h3>
           <div className='section--content'>
             <p className='section--paragraph'>
-              I’m a full-stack developer and designer. From initial project idea
-              and UX/UI design, to back-end implementation and problem solving,
-              I want to be involved.
+              My favorite stack is React in Next.js, with Tailwind or SCSS. Express is my most familiar backend framework, but I've gained experience with PHP and GoLang backends.
             </p>
             <p className='section--paragraph'>
-              React has been my primary focus for over a year now, and I have
-              worked on projects involving Redux, MongoDB/Mongoose, Express, and
-              more.
-            </p>
-            <p className='section--paragraph'>
-              I have over two years of experience writing CSS, and I primarily
-              work with SASS and Styled-components. I’m no stranger to
-              frameworks such as Tailwind, Bulma, and Bootstrap to name a few.
-              For animation, I use Framer-Motion and Lottie.
-            </p>
-            <p className='section--paragraph'>
-              My designs are usually created in Figma, and a lot of the assets I
-              use are created by myself in Adobe suite products such as
-              Illustrator, Photoshop, or After Effects.
+              I love writing JavaScript and CSS, and I'm always looking for new ways to improve my skills.
             </p>
           </div>
           <div className='skills-list--link' onClick={modalToggler}>
