@@ -274,10 +274,10 @@ function About() {
           <h3 className='section--header'>My most loved tools and tech</h3>
           <div className='section--content'>
             <p className='section--paragraph'>
-              My favorite stack is React in Next.js, with Tailwind or SCSS. Express is my most familiar backend framework, but I've gained experience with PHP and GoLang backends.
+              My favorite stack is React in Next.js, with Tailwind or SCSS. Express is my most familiar backend framework, but I&apos;ve gained experience with PHP and GoLang backends.
             </p>
             <p className='section--paragraph'>
-              I love writing JavaScript and CSS, and I'm always looking for new ways to improve my skills.
+              I love writing JavaScript and CSS, and I&apos;;m always looking for new ways to improve my skills.
             </p>
           </div>
           <div className='skills-list--link' onClick={modalToggler}>

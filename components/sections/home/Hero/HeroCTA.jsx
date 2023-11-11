@@ -19,7 +19,7 @@ function HeroCTA() {
   return (
     <StyledHeroCTA>
       <Parallax y={['-60%', '150%']}>
-        <h1>Hey, I'm Silas!</h1>
+        <h1>Hey, I&apos;m Silas!</h1>
         <h2 className='subtitle'>A Frontend Web Developer & Designer</h2>
         <div>
           <Button>
